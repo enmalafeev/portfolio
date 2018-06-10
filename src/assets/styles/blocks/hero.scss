@@ -1,0 +1,42 @@
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('/assets/images/bg1800.jpg') no-repeat center;
+
+    &__links {
+        position: absolute;
+        width: 10%;
+
+        top: 35px;
+        left: 30px;
+    }
+
+    &__menu {
+        position: absolute;
+        top: 35px;
+        right: 30px;
+    }
+
+    &__title {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__user {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+    }
+
+    &__arrow-scroll {
+        position: absolute;
+        left: calc(100vw / 2);
+        bottom: 70px;
+    }
+}
+
+

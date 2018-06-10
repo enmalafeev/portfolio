@@ -1,0 +1,37 @@
+.auth-btn {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}
+
+.login-btn {
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: 500;
+
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    text-decoration: none;
+
+    padding: 10px 27px;
+
+    &:hover,
+    &:focus {
+        color: $green;
+        background-color: #fff;
+    }
+
+}
+
+.arrow-down-link {
+    width: 26px;
+    height: 16px;
+
+    fill: #fff;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}

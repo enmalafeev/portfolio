@@ -1,0 +1,20 @@
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.socials__link-icon {
+    width: 35px;
+    height: 35px;
+
+    fill: #fff;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+

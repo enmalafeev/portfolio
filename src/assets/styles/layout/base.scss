@@ -12,6 +12,9 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+
   overflow: hidden;
   min-height: 100%;
   position: relative;
@@ -20,6 +23,7 @@ body {
 .container {
   margin: 0 auto;
   width: 95%;
+  flex: 1 0 auto;
 }
 
 button {
