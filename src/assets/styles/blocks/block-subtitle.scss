@@ -1,0 +1,39 @@
+.block-subtitle {
+    font-family: 'bernier', Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+
+    color: $grey;
+
+    text-align: center;
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+
+        width: 22px;
+        height: 5px;
+
+        background-color: #cacbc8;
+        }
+
+    &::before {
+        top: 50%;
+        left: 0;
+    }
+
+    &::after {
+        top: 50%;
+        right: 0;
+    }
+}
+
+.block-subtitle__center {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+
+    margin-bottom: 35px;
+}

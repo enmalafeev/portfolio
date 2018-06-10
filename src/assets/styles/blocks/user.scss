@@ -17,35 +17,62 @@
         text-align: center;
     }
 
+    &__desc {
+        color: #fff;
+        margin-bottom: 40px;
+    }
+
     &__name {
         font-size: 35px;
-        color: #fff;
         text-align: center;
 
     }
 
     &__info {
         font-weight: 300;
-        color: #fff;
         text-align: center;
     }
 }
 
 .user-wrap {
-    width: 380px;
-    height: 395px;
-
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
     margin: auto;
 
     background-color: #fff;
     opacity: 0.85;
     border-radius: 5px;
+
+    text-align: center;
+    padding-top: 40px;
+
+    color: #000;
+}
+
+.user__wrap-links {
+    width: 40%;
+    margin: 0 auto;
+
+    margin-bottom: 40px;
+}
+
+.user__decs--black {
+    color: #000;
+}
+
+
+.user-desc__image {
+    text-align: center;
+}
+
+.user-desc__avatar {
+    width: 444px;
+    min-height: 390px;
+}
+
+.user-desc__title {
+    width: 40%;
+    margin: 0 auto;
+
+    margin-bottom: 30px;
 }
 
 

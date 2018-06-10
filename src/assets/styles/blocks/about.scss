@@ -1,0 +1,59 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+        background-color: #efeee9;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        width: 50%;
+        background-color: #eeebdf;
+    }
+}
+
+// .about-triangle {
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     width: 100%;
+// }
+
+// .about-triangle__pic {
+//     width: 100%;
+// }
+
+.about__left-title {
+    background: url('/assets/images/about_header.png') no-repeat center;
+
+    margin-bottom: 40px;
+}
+
+.about__right-title {
+    text-align: center;
+}
+
+.about-title__header {
+    font-family: 'bernier', Arial, Helvetica, sans-serif;
+    font-size: 63px;
+    font-weight: normal;
+
+    text-align: center;
+}
+
+.about__left-content {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.about__right-description {
+    padding-left: 40px;
+}

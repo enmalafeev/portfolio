@@ -42,38 +42,40 @@ block content
   section.about
     .about__left
       .about-triangle
-        svg.triangle.triangle_fill_white
+        //- +icon("about_bg_left", "about-triangle__pic")
+        //- svg.triangle.triangle_fill_white
 
       .about__left-title
         h2.about-title__header обо мне
       .about__left-content
         .user-desc
           .user-desc__image
-            img.user-desc__avatar
+            +image("avatar.jpg", "Малафеев Евгений", "user-desc__avatar")
+
           .user-desc__data
             .user-desc__title
               h2.block-subtitle кто я
             .user-desc__text.text-content
-              p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque voluptatum officiis nam vel voluptate eligendi molestias cupiditate fugiat, voluptates sed quis voluptatem pariatur blanditiis quidem culpa minima veniam reiciendis sapiente.
-              p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam iusto ipsum eligendi distinctio a esse rem nemo enim cumque aliquam. Commodi praesentium fugiat maiores enim voluptatum, a sequi dicta inventore?
+              p Я веб разработчик из Санкт-Петербурга. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
     .about__right
-      .about__triangle
-        svg.triangle.triangle_fill_beige
+      .about-triangle
+        //- svg.triangle.triangle_fill_beige
       .about__right-title
-        .block-subtitle Чем я могу быть вам полезен
+        h2.block-subtitle.block-subtitle__center Чем я могу быть вам полезен
       .about__right-description.text-content
-        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto quo nobis, maxime ipsam voluptatem, veritatis harum nostrum esse hic et sapiente quam doloremque temporibus consequatur aliquam adipisci porro, quidem a?
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .about__right-content
         -
           var skills = [
-            ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-            ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-            ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
+            ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
+            ['Backend', [['PHP', 30], ['MySQL', 50], ['Node.js', 70], ['Mongo.db', 70]]],
+            ['Workflow', [['Git', 30], ['Gulp', 50], ['Webpack', 70]]],
           ]
         ul.skills-list
           each skillsrow in skills
             li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
+              h3.skills-row__title #{skillsrow[0]}
               ul.skills-row__list
                 each skill in skillsrow[1]
                   li.skills-row__item
@@ -84,6 +86,7 @@ block content
                       .skill__title #{skill[0]}
   section.map
     .google-map
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43325.75104347665!2d30.19668377852085!3d60.00080322907122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469635c9a22b0ccd%3A0xbacf2198e57a2e54!2z0L_RgC4g0JDQstC40LDQutC-0L3RgdGC0YDRg9C60YLQvtGA0L7QsiwgMjDQujEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTczNzM!5e0!3m2!1sru!2sru!4v1528651913435" width="1800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
     .map__data
       .contacts
         h2.contacts__title

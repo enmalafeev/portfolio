@@ -1,0 +1,26 @@
+.main-menu {
+    background-color: $green;
+    width: 100%;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        text-decoration: none;
+        line-height: 45px;
+    }
+
+    &__link {
+        color: #fff;
+        padding: 13px 32px;
+
+        &:hover,
+        &:active {
+            background-color: $green-dark;
+        }
+    }
+}
