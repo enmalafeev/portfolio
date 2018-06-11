@@ -1,4 +1,26 @@
-// .google-map {
-//     background: url('/assets/images/map.jpg') no-repeat center;
-//     height: auto;
-// }
+.map {
+    position: relative;
+}
+
+.map__data {
+    width: 25%;
+    height: 290px;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.google-map {
+    width: 100px;
+    height: auto;
+    background: url('/assets/images/map.jpg') no-repeat center;
+    height: auto;
+}

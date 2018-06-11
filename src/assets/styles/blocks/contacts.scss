@@ -1,3 +1,30 @@
 .contacts {
+    padding-left: 40px;
+}
 
+.contacts__subtitle {
+    width: 60%;
+    margin: 0 auto;
+
+    margin-bottom: 30px;
+}
+
+.contacts__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contacts-row {
+    margin-bottom: 10px;
+}
+
+.contacts__icon {
+    margin-right: 10px;
+}
+
+.contacts__icon-img {
+    width: 24px;
+    height: 24px;
+    fill: $green;
 }

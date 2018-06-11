@@ -1,0 +1,17 @@
+.blog-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 70px;
+}
+
+.blog-left {
+    width: 30%;
+    padding-right: 120px;
+}
+
+.blog-right {
+    width: 70%;
+    margin-bottom: 300px;
+}
