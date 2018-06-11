@@ -1,5 +1,5 @@
 .login {
-
+    display: none; // Спрятал временно блок
     &__form {
         display: flex;
         flex-direction: column;
@@ -58,6 +58,14 @@ form {
     fill: #c4cbcd;
 }
 
+.login__robot-check {
+    border: none;
+    legend {
+        font-weight: 700;
+        color: $grey;
+    }
+}
+
 .login__label-checkbox-human {
     position: relative;
     &::before {
@@ -75,15 +83,6 @@ form {
     }
 }
 
-.login__robot-check {
-    border: none;
-
-    legend {
-        font-weight: 700;
-        color: $grey;
-    }
-}
-
 .login__checkbox-human:checked + label::before {
     width: 20px;
     height: 20px;
@@ -96,7 +95,6 @@ form {
 }
 
 .login__label-checkbox-robot {
-    align-self: center;
     margin-right: 50px;
 
     position: relative;
@@ -115,19 +113,26 @@ form {
         top: 0;
         left: -30px;
     }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+    }
 }
 
-// .login__checkbox-robot:checked + label::before {
-//     position: absolute;
-//     content: "";
-//     width: 20px;
-//     height: 20px;
-//     border: 1px solid #c4cbcd;
-//     border-radius: 50%;
-//     background-color: #fff;
-//     top: 0;
-//     left: 0;
-// }
+.login__checkbox-robot:checked + label::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c4cbcd;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 0;
+    left: -30px;
+}
 
 .login__checkbox-robot:checked + label::after {
     width: 8px;
@@ -136,6 +141,6 @@ form {
     border-radius: 50%;
     background-color: $green;
 
-    top: 0;
-    left: -30px;
+    top: 7px;
+    left: -23px;
 }
