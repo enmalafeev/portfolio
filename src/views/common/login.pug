@@ -1,0 +1,15 @@
+.login
+    h2.login__title Авторизуйтесь
+    form(name="login-form" method="post").login__form
+        input(type="text" name="login")
+        input(type="password" name="password")
+        input(type="checkbox" name="human" id="human")
+        label(for="human") Я человек
+        fieldset.login__robot-check
+            legend Вы точно не робот?
+            .checkbox-cnt
+                input(type="radio" name="robot-checkbox" id="robot-yes")
+                label(for="robot-checkbox") Да
+                input(type="radio" name="robot-checkbox" id="robot-no")
+                label(for="robot-checkbox") Не уверен
+    +nav('main-menu', ['На главную', 'Войти'])

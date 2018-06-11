@@ -1,0 +1,141 @@
+.login {
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        height: 45px;
+        background-color: #fff;
+        opacity: 1;
+        border-radius: 0 5px 5px 0;
+
+        padding-left: 20px;
+    }
+
+}
+
+form {
+    label {
+        cursor: pointer;
+    }
+}
+
+.input-cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-wrap {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 20px;
+}
+
+.checkbox-cnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+
+    background-color: #f0efe9;
+    border-radius: 5px 0 0 5px;
+}
+
+.input__img-svg {
+    width: 18px;
+    height: 18px;
+    fill: #c4cbcd;
+}
+
+.login__label-checkbox-human {
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+
+        width: 20px;
+        height: 20px;
+
+        background-color: $green;
+        border-radius: 3px;
+
+        top: 0;
+        left: -30px;
+    }
+}
+
+.login__robot-check {
+    border: none;
+
+    legend {
+        font-weight: 700;
+        color: $grey;
+    }
+}
+
+.login__checkbox-human:checked + label::before {
+    width: 20px;
+    height: 20px;
+
+    border-radius: 3px;
+    background-color: $green;
+    background: url("/assets/images/check.svg") no-repeat center;
+    top: 0;
+    left: -30px;
+}
+
+.login__label-checkbox-robot {
+    align-self: center;
+    margin-right: 50px;
+
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        width: 20px;
+        height: 20px;
+
+        border: 1px solid #c4cbcd;
+        border-radius: 50%;
+        background-color: #fff;
+
+        top: 0;
+        left: -30px;
+    }
+}
+
+// .login__checkbox-robot:checked + label::before {
+//     position: absolute;
+//     content: "";
+//     width: 20px;
+//     height: 20px;
+//     border: 1px solid #c4cbcd;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     top: 0;
+//     left: 0;
+// }
+
+.login__checkbox-robot:checked + label::after {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+    background-color: $green;
+
+    top: 0;
+    left: -30px;
+}
