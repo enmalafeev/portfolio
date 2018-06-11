@@ -1,23 +1,10 @@
 .menu-articles {
 
-    &__title {
+    &__item {
         margin-bottom: 30px;
         text-align: right;
 
         position: relative;
-
-        &::after {
-            position: absolute;
-            content: "";
-
-            width: 3px;
-            height: 100%;
-
-            top: 0;
-            right: -20px;
-
-            background-color: $green;
-        }
     }
 
     &__link {
@@ -28,5 +15,18 @@
         &:active {
             color: $green;
         }
+    }
+}
+
+.menu-articles__item--active {
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 3px;
+        height: 100%;
+        top: 0;
+        right: -20px;
+        background-color: $green;
     }
 }

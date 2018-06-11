@@ -17,11 +17,8 @@ block content
               "Самый необходимый набор Gulp плагинов",
               "Почему я выбрал Webpack"
             ]
+          +list("menu-articles", titles, 0)
 
-          ul.menu-articles
-            each item in titles
-              li.menu-articles__title
-                a(href="#").menu-articles__link= item
       .blog-right
         .articles
           article.article

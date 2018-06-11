@@ -22,6 +22,7 @@
         position: relative;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 3;
     }
 
     &__user {
@@ -34,8 +35,10 @@
 
     &__arrow-scroll {
         position: absolute;
-        left: calc(100vw / 2);
+        left: calc(100vw / 2 - 13px);
         bottom: 70px;
+
+        z-index: 10;
     }
 }
 
