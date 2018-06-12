@@ -38,3 +38,36 @@
 .arrow-up-link {
     transform: rotate(180deg);
 }
+
+.btn-show-portfolio-site {
+    color: #fff;
+    background-color: $green;
+    text-decoration: none;
+    border-radius: 5px;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 48px;
+    padding-right: 20px;
+
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        width: 20px;
+        height: 20px;
+
+        top: 13px;
+        left: 18px;
+
+        background: url("assets/images/link.svg") no-repeat center;
+    }
+
+    &:hover,
+    &:active {
+        background-color: $green-dark;
+    }
+
+}

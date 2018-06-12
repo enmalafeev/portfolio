@@ -21,9 +21,8 @@
 }
 
 .about__left-title {
+    display: flex;
     background: url('assets/images/about_header.png') no-repeat center;
-
-    margin-bottom: 40px;
 }
 
 .about__right-title {
@@ -32,10 +31,12 @@
 
 .about-title__header {
     font-family: 'bernier', Arial, Helvetica, sans-serif;
-    font-size: 63px;
-    font-weight: normal;
-
     text-align: center;
+    font-size: 63px;
+    color: $dark-grey;
+
+    margin: auto;
+    padding-bottom: 40px;
 }
 
 .about__left-content {
