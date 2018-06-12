@@ -21,7 +21,8 @@
 
 }
 
-.arrow-down-link {
+.arrow-down-link,
+.arrow-up-link {
     width: 26px;
     height: 16px;
 
@@ -32,4 +33,8 @@
     &:focus {
         opacity: 1;
     }
+}
+
+.arrow-up-link {
+    transform: rotate(180deg);
 }

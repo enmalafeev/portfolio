@@ -2,3 +2,58 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Мои работы'
+
+block content
+  include ../common/hero.pug
+
+  section.my-works
+    h1.my-works__title.block-subtitle Мои работы
+    .portfolio
+      .portfolio-left
+        .portfolio-left__title
+          h2.block-subtitle Сайт школы онлайн образования
+        .portfolio__desc
+          p.portfolio-description HTML, CSS, JavaScript
+        .portfilio__btn
+          a(href="#").btn.show-portfolio-site
+      .portfolio-right
+        .portfolio-slider
+          -
+            var items = ["work1", "work2", "work3"]
+          +list(".portfolio-slider__list", items, 1)
+    section.reviews
+      .reviews__title
+        h2.block-subtitle Что обо мне говорят
+      .reviews-block
+        -
+          var listReview = [
+            {
+              text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+              avatar: 'img',
+              name: 'Ковальчук Дмитрий',
+              status: 'основатель LoftSchool'
+            },{
+              text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+              avatar: 'img',
+              name: 'Сабанцев Владимир',
+              status: 'преподаватель LoftSchool'
+            }
+          ]
+        ul.reviews-block__list
+          each item in listReview
+            li.reviews-block__item
+              p.reviews-block__text= item.text
+              div.reviews-block__img= item.img
+              p.reviews-block__name= item.name
+              p.reviews-block__status= item.status
+      .contact-me
+        h3.contact-me__title.block-subtitle Связаться со мной
+        form.contact-me__form(action="post")
+          input.contact-me__name(type="text", name="name" placeholder="Имя")
+          input.contact-me__email(type="email" name="email" placeholder="Email")
+          textarea.contact-me__message(name="message", cols="30", rows="10" placeholder="Ваше сообщение")
+          button.btn.btn-send(type="submit") Отправить
+          button.btn.btn-clear(type="button") Очистить
+      .reviews__arrow-scroll
+        a(href="#").btn-up
+          +icon("arrow_down", "arrow-up-link")
