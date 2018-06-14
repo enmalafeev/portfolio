@@ -5,47 +5,32 @@
 }
 
 .slider__active-screen {
-    height: 75%;
     display: flex;
-    margin: auto;
+
 }
 
 .slider__img-wrap {
-    display: flex;
+    width: 450px;
+    height: 300px;
+    background: url("assets/images/work-1.png") no-repeat center;
+    margin: auto;
 }
 
 .slider-prev {
-    height: 25%;
-    display: flex;
-    justify-content: space-between;
-}
-
-
-.slider__active-img {
     width: 100%;
-    height: auto;
 }
+
 
 .slider-prev__down {
-    display: flex;
-    width: 50%;
-}
-
-.slider__prev__down-img {
-    width: 100%;
+    width: 275px;
+    height: 180px;
     height: auto;
-
-    margin: auto;
+    background: url("assets/images/work-2.png") no-repeat center;
 }
 
 .slider-prev__up {
-    display: flex;
-    width: 50%;
-}
-
-.slider__prev__up-img {
-    width: 100%;
     height: auto;
-
-    margin: auto;
+    width: 275px;
+    height: 180px;
+    background: url("assets/images/work-3.png") no-repeat center;
 }

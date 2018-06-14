@@ -17,6 +17,7 @@
     &:focus {
         color: $green;
         background-color: #fff;
+        transition: all 0.5s ease-out;
     }
 
 }
@@ -32,6 +33,7 @@
     &:hover,
     &:focus {
         opacity: 1;
+        transition: all 0.5s ease-out;
     }
 }
 
@@ -68,6 +70,7 @@
     &:hover,
     &:active {
         background-color: $green-dark;
+        transition: all 0.5s ease-out;
     }
 
 }

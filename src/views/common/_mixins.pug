@@ -31,3 +31,9 @@ mixin triangles(className)
     svg(viewBox='0 0 1000 110' preservAspectRatio='none').triangles__svg
       polygon(points='0,0 0,110, 500,110').triangles__svg-left
       polygon(points='500,110 1000,0, 1000,110').triangles__svg-right
+
+mixin triangleLeft(className)
+  div(class=className)
+    svg(viewBox='0 0 1000 110' preservAspectRatio='none' class=`${className}__svg`)
+        polygon(points='0,0 0,110, 500,110')
+

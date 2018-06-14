@@ -3,7 +3,6 @@
 
     &__img {
         display: inline-block;
-        vertical-align: center;
         width: 140px;
         height: 140px;
         margin-bottom: 16px;
@@ -11,10 +10,9 @@
     }
 
     &__img-pic {
-        width: 140px;
-        height: 140px;
+        width: 100%;
+        height: auto;
         border-radius: 50%;
-        text-align: center;
     }
 
     &__desc {
