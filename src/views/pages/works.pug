@@ -9,31 +9,26 @@ block content
   section.my-works
     .my-works__title
       h1.big-title Мои работы
-    .portfolio
-      .portfolio-left
-        .portfolio-wrap
-          .portfolio-left__title
-            h2.block-subtitle Сайт школы онлайн образования
-          .portfolio__desc
-            p.portfolio-description HTML, CSS, JavaScript
-          .portfilio__btn
-            a(href="#").btn-show-portfolio-site Посмотреть сайт
-      .portfolio-right
-        .slider
-          .slider__active-screen
-            .slider__img-wrap
-              //- +image("work-1.png", "work1", "slider__active-img")
-          .slider-prev
-            .slider-prev__down
-              //- +image("work-2.png", "work2", "slider__prev__down-img")
-            .slider-prev__up
-              //- +image("work-3.png", "work3", "slider__prev__up-img")
-          //- -
-          //-   var items = ["work1", "work2", "work3"]
-          //- +list(".portfolio-slider", items, 1)
+    .slider
+      .slider__info-container
+        .slider__info-title
+          h2.block-subtitle Сайт школы онлайн образования
+        .slider__info-skills HTML, CSS, JavaScript
+        .slider__info-button
+          a(href="#").btn-show-portfolio-site Посмотреть сайт
+      .slider__display
+        img(src="assets/images/work-1.png" alt="").slider__big-pic
+      .slider__buttons
+        .slider__button
+          .slider__button-img-wrap
+            img(src="assets/images/work-2.png", alt="work2").slider__button-pic
+        .slider__button.slider__button--next
+          .slider__button-img-wrap
+            img(src="assets/images/work-4.png", alt="work4").slider__button-pic
+
     section.reviews
       .reviews__title
-        h2.block-subtitle Что обо мне говорят
+        h2.big-title Что обо мне говорят
       .reviews-block
         -
           var listReview = [

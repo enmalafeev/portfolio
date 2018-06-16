@@ -1,0 +1,22 @@
+.reviews-block {
+  min-width: 758px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 50%;
+  }
+
+  &__name {
+    font-weight: bold;
+    color: $green;
+  }
+
+  &__status {
+    color: $green;
+  }
+}
+
+

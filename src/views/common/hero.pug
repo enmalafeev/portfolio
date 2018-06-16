@@ -1,3 +1,6 @@
+block variables
+  - var colorTriangle = "fillWhite"
+
 section.hero
   .socials.hero__icons
   -
@@ -32,5 +35,5 @@ section.hero
       +icon("arrow_down", "arrow-down-link")
 
   .triangles
-    +triangles("triangles__hero")
+    +triangles(`!{colorTriangle}`)
 
