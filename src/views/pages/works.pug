@@ -34,12 +34,12 @@ block content
           var listReview = [
             {
               text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
-              avatar: 'img',
+              avatar: 'assets/images/ava1.png',
               name: 'Ковальчук Дмитрий',
               status: 'основатель LoftSchool'
             },{
               text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
-              avatar: 'img',
+              avatar: 'assets/images/ava2.png',
               name: 'Сабанцев Владимир',
               status: 'преподаватель LoftSchool'
             }
@@ -48,9 +48,11 @@ block content
           each item in listReview
             li.reviews-block__item
               p.reviews-block__text= item.text
-              div.reviews-block__img= item.img
-              p.reviews-block__name= item.name
-              p.reviews-block__status= item.status
+              .reviews-block__info
+                img(src=`${item.avatar}`).reviews-block__img-pic
+                .reviews-block__name-wrap
+                  p.reviews-block__name= item.name
+                  p.reviews-block__status= item.status
       .contact-me
         h3.contact-me__title.block-subtitle Связаться со мной
         form.contact-me__form(action="post")

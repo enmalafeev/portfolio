@@ -1,5 +1,5 @@
 .reviews-block {
-  min-width: 758px;
+  min-width: 750px;
 
   &__list {
     display: flex;
@@ -7,6 +7,38 @@
 
   &__item {
     width: 50%;
+  }
+
+  &__text {
+    position: relative;
+    margin-bottom: 25px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 33px;
+      height: 29px;
+
+      top: -40px;
+      left: 0;
+
+      background: url("assets/images/quotes.png") no-repeat center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img-pic {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+  }
+
+  &__name-wrap {
+    padding-left: 22px;
   }
 
   &__name {
