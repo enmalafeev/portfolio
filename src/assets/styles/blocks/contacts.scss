@@ -1,5 +1,12 @@
 .contacts {
     padding-left: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__title {
+    align-self: center;
 }
 
 .contacts__subtitle {

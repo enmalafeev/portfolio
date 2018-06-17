@@ -17,7 +17,7 @@ block content
         //- svg.triangle.triangle_fill_white
 
       .about__left-title
-        h2.about-title__header обо мне
+        h2.about-title__header.big-title= title
       .about__left-content
         .user-desc
           .user-desc__image
@@ -39,45 +39,27 @@ block content
       .about__right-content
         #skills-container
 
-        //- -
-        //-   var skills = [
-        //-     ['Frontend', [['HTML5', 30], ['CSS3', 50], ['JavaScript', 70]]],
-        //-     ['Backend', [['PHP', 30], ['MySQL', 50], ['Node.js', 70], ['Mongo.db', 70]]],
-        //-     ['Workflow', [['Git', 30], ['Gulp', 50], ['Webpack', 70]]],
-        //-   ]
-        //- ul.skills-list
-        //-   each skillsrow in skills
-        //-     li.skills-list__item.skills-row
-        //-       h3.skills-row__title #{skillsrow[0]}
-        //-       ul.skills-row__list
-        //-         each skill in skillsrow[1]
-        //-           li.skills-row__item
-        //-             figure.skill(data-percents="70")
-        //-               svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-        //-                 circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-        //-                 circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-        //-               .skill__title #{skill[0]}
   section.map
     .google-map
       //- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43325.75104347665!2d30.19668377852085!3d60.00080322907122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469635c9a22b0ccd%3A0xbacf2198e57a2e54!2z0L_RgC4g0JDQstC40LDQutC-0L3RgdGC0YDRg9C60YLQvtGA0L7QsiwgMjDQujEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTczNzM!5e0!3m2!1sru!2sru!4v1528651913435" width="1800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
       +image("map.jpg", "map", "map__img")
     .map__data
       .contacts
-        h2.contacts__title
-          .block-subtitle.contacts__subtitle Контакты
+        h2.contacts__title.block-subtitle Контакты
         address.contacts__data
           ul.contacts__list
             -
               var contacts = [
                 ['skype', 'evgeny_malafeev'],
                 ['envelope', 'malafeev.en@yandex.ru'],
-                ['phone', '+7 911 222 33 44'],
+                ['phone', '+7 911 924 87 98'],
                 ['map_marker', 'г.Санкт-Петербург пр.Авиаконструкторов д.20']
               ]
             each item in contacts
               li.contacts__item.contacts-row
                 .contacts-row.contacts__icon
-                  +icon(`${item[0]}`, 'contacts__icon-img')
+                  a(href="#").contacts__link
+                    +icon(`${item[0]}`, 'contacts__icon-img')
                 .contacts-row.contacts__title #{item[1]}
 
 

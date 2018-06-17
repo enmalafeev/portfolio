@@ -14,6 +14,7 @@
   input,
   textarea {
     border-radius: 5px;
+    border: none;
     padding-left: 20px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -25,13 +26,11 @@
 }
 
 .contact-me__form-wrap {
+  position: absolute;
+  top: 0;
+  left: 15px;
   display: flex;
   flex-direction: column;
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // bottom: 0;
 }
 
 .form-btn-wrap {

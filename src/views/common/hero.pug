@@ -1,6 +1,3 @@
-block variables
-  - var colorTriangle = "fillBright"
-
 section.hero
   .socials.hero__icons
   -
@@ -16,7 +13,7 @@ section.hero
           a(href=`${item[1]}`).socials__link
             +icon(item[0], "socials__link-icon")
 
-  a.hamburger.hero__menu
+  button.hamburger.hero__menu
     +icon("hamburger", "hero__menu-hamburger")
 
   .hero__title
@@ -35,5 +32,10 @@ section.hero
       +icon("arrow_down", "arrow-down-link")
 
   .triangles
-    +triangles(`${colorTriangle}`)
+    - if (title == 'Обо мне')
+      +triangles('triangles-about', 'fillGrey', 'fillBright')
+    - if (title == 'Мои работы')
+      +triangles('triangles-works')
+    - if (title == 'Блог')
+      +triangles('triangles-white')
 

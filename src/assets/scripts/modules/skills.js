@@ -5,6 +5,19 @@ const skill = {
   props: {
     skillName: String,
     skillPercent: Number
+  },
+  methods: {
+    drawCircle() {
+      const circle = this.$refs["color-circle"];
+      const dashoffset = parseInt(
+        getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
+      );
+      const percents = (dashoffset / 100) * (100 - this.skillPercent);
+      circle.style.strokeDashoffset = percents;
+    }
+  },
+  mounted() {
+    this.drawCircle();
   }
 };
 
@@ -18,8 +31,6 @@ const skillsRow = {
   }
 };
 
-
-
 new Vue({
   el: "#skills-container",
   components: {
@@ -31,7 +42,6 @@ new Vue({
   created() {
     const data = require("../../data/skills.json");
     this.skills = data;
-    console.log(data);
   },
   template: "#skills-list"
 });

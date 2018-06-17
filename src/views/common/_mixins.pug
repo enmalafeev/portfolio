@@ -12,12 +12,12 @@ mixin list(className, items, activeItem)
         a(class=`${className}__link` href="#")= item
 
 
-mixin nav(className, items, activeItem)
+mixin nav(className, items)
   nav(class=`${className}`)
     ul(class=`${className}__list`)
       each item in items
         li(class=`${className}__item`)
-          a(class=`${className}__link` href="#")= item
+          a(class=`${className}__link` href=`${item.link}`)= item.title
 
 mixin socials(socials, modClass)
   ul.socials
@@ -29,11 +29,7 @@ mixin socials(socials, modClass)
 mixin triangles(className, fillColorLeft, fillColorRight)
   div(class=className)
     svg(viewBox='0 0 1000 110' preservAspectRatio='none').triangles__svg
-      polygon(points='0,0 0,110, 500,110' class=`${fillColor}`)
+      polygon(points='0,0 0,110, 500,110' class=`${fillColorLeft}`)
       polygon(points='500,110 1000,0, 1000,110' class=`${fillColorRight}`)
 
-mixin triangleLeft(className)
-  div(class=className)
-    svg(viewBox='0 0 1000 110' preservAspectRatio='none' class=`${className}__svg`)
-        polygon(points='0,0 0,110, 500,110')
 
