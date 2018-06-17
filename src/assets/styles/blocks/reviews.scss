@@ -1,9 +1,9 @@
 .reviews {
   width: 100vw;
-  height: 100vh;
-  background: url("/assets/images/bg_works.jpg") no-repeat center / cover;
-
-  margin-bottom: 157px;
+  background: url("/assets/images/bg-works.jpg") no-repeat center / cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviews__title {

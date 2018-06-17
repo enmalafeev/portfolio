@@ -75,3 +75,16 @@
     }
 
 }
+
+.btn-form {
+    background-color: $green;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $green-dark;
+    }
+}

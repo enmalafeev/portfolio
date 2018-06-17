@@ -26,11 +26,11 @@ mixin socials(socials, modClass)
         a(href=`${item[1]}`).socials__link
           +icon(item[0], "socials__link-icon")
 
-mixin triangles(className)
+mixin triangles(className, fillColorLeft, fillColorRight)
   div(class=className)
     svg(viewBox='0 0 1000 110' preservAspectRatio='none').triangles__svg
-      polygon(points='0,0 0,110, 500,110').triangles__svg-left
-      polygon(points='500,110 1000,0, 1000,110').triangles__svg-right
+      polygon(points='0,0 0,110, 500,110' class=`${fillColor}`)
+      polygon(points='500,110 1000,0, 1000,110' class=`${fillColorRight}`)
 
 mixin triangleLeft(className)
   div(class=className)
