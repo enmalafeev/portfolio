@@ -7,6 +7,12 @@
 
 .contacts__title {
     align-self: center;
+    
+}
+
+.contacts__link {
+    text-decoration: none;
+    display: flex;
 }
 
 .contacts__subtitle {
@@ -34,5 +40,6 @@
     width: 24px;
     height: 24px;
     fill: $green;
+    margin-right: 10px;
 }
 

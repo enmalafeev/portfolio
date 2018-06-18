@@ -5,8 +5,8 @@ var blur = (function() {
     set: function() {
       var imgWidth = document.querySelector(".reviews").offsetWidth,
         posLeft = -wrapper.offsetLeft,
-        posTop = -wrapper.offsetTop;
-      blurCSS = form.style;
+        posTop = -wrapper.offsetTop,
+        blurCSS = form.style;
 
       blurCSS.backgroundSize = imgWidth + "px" + " " + "auto";
       blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
