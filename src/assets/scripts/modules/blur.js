@@ -9,7 +9,7 @@ var blur = (function() {
         blurCSS = form.style;
 
       blurCSS.backgroundSize = imgWidth + "px" + " " + "auto";
-      blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
+      // blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
     }
   };
 })();
@@ -19,5 +19,3 @@ blur.set();
 window.onresize = function() {
   blur.set();
 };
-
-alert("Help me !");

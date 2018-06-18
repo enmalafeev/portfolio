@@ -17,15 +17,20 @@ section.hero
     +icon("hamburger", "hero__menu-hamburger")
 
   .hero__title
-    .section-title
-      //- image(imagePath, imageAlt, imageClass)
+    -if (title == 'Блог')
+      .section-title-blog
+    - else
+      .section-title
 
     .user.hero__user
       .user__img
         +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
       .user__desc
         h1.user__name Евгений Малафеев
-        p.user__info Личный сайт веб-разработчика
+        - if (title == 'Блог')
+          p.user-info Статьи, которые я написал
+        - else
+          p.user__info Личный сайт веб-разработчика
 
   .hero__arrow-scroll
     a(href="#").btn-down
