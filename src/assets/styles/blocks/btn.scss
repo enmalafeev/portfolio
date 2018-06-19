@@ -1,9 +1,9 @@
 .auth-btn {
     align-self: flex-end;
 
-    @include small-phones {
+    @include phones {
         align-self: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0.875rem;
     }
 }
 

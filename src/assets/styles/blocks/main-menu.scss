@@ -26,7 +26,8 @@
             padding-right: 1.625rem;
         }
 
-        @include w390 {
+        @include phones {
+            font-size: 0.875rem;
             padding-left: 1rem;
             padding-right: 1rem;
         }
