@@ -1,5 +1,10 @@
 .auth-btn {
     align-self: flex-end;
+
+    @include small-phones {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
 }
 
 .login-btn {

@@ -43,6 +43,10 @@
     padding-top: 40px;
 
     color: #000;
+
+    @include small-phones {
+        margin-bottom: 40px;
+    }
 }
 
 .user__wrap-links {
