@@ -1,8 +1,8 @@
-.contact-me {
-  width: 32%;
-  margin: 0 auto;
-  // padding-bottom: 300px;
-}
+// .contact-me {
+//   width: 32%;
+//   margin: 0 auto;
+//   // padding-bottom: 300px;
+// }
 
 .contact-me__form {
   display: flex;
@@ -19,6 +19,12 @@
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom: 20px;
+
+    &:focus,
+    &:active {
+      outline: 2px solid $green;
+      box-shadow: 0 0 4px $green;
+    }
   }
   textarea {
     min-height: 140px;

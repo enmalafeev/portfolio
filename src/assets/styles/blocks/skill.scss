@@ -9,6 +9,15 @@
 
 .skills-list {
     padding-left: 40px;
+
+    @include tablets {
+        padding: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .skills-row {
@@ -23,6 +32,10 @@
         color: $grey;
 
         margin-bottom: 10px;
+
+        @include tablets {
+            text-align: center;
+        }
     }
 }
 

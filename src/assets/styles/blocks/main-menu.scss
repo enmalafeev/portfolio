@@ -4,12 +4,12 @@
 
     &__list {
         display: flex;
-        flex-direction: row;
         align-items: center;
     }
 
     &__item {
         line-height: 45px;
+        flex: 1 1 auto;
     }
 
     &__link {

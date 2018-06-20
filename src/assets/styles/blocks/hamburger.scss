@@ -3,6 +3,11 @@
     height: 35px;
     background-color: transparent;
     padding: 0;
+
+    @include phones {
+        width: 25px;
+        height: 20px;
+    }
 }
 
 .hero__menu-hamburger {

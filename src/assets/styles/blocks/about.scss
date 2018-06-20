@@ -3,12 +3,22 @@
     flex-direction: row;
     justify-content: space-between;
 
+    @include tablets {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     &__left {
         display: flex;
         flex-direction: column;
 
         width: 50%;
         background-color: #efeee9;
+
+        @include tablets {
+            width: 100%;
+            justify-content: center;
+        }
     }
 
     &__right {
@@ -17,6 +27,11 @@
 
         width: 50%;
         background-color: #eeebdf;
+
+        @include tablets {
+            width: 100%;
+            justify-content: center;
+        }
     }
 }
 

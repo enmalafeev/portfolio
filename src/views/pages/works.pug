@@ -53,18 +53,17 @@ block content
                 .reviews-block__name-wrap
                   p.reviews-block__name= item.name
                   p.reviews-block__status= item.status
-      .contact-me
-        .blur-form-wrapper
-          .blur-form
-          .contact-me__form-wrap
-            h3.contact-me__title.block-subtitle Связаться со мной
-            form.contact-me__form(action="post")
-              input.contact-me__name(type="text", name="name" placeholder="Имя")
-              input.contact-me__email(type="email" name="email" placeholder="Email")
-              textarea.contact-me__message(name="message", placeholder="Ваше сообщение")
-              .form-btn-wrap
-                button.btn-form.btn-send(type="submit") Отправить
-                button.btn-form.btn-clear(type="button") Очистить
+      .blur-form-wrapper
+        .blur-form
+        .contact-me__form-wrap
+          h3.contact-me__title.block-subtitle Связаться со мной
+          form.contact-me__form(action="post")
+            input.contact-me__name(type="text", name="name" placeholder="Имя")
+            input.contact-me__email(type="email" name="email" placeholder="Email")
+            textarea.contact-me__message(name="message", placeholder="Ваше сообщение")
+            .form-btn-wrap
+              button.btn-form.btn-send(type="submit") Отправить
+              button.btn-form.btn-clear(type="button") Очистить
       .reviews__arrow-scroll
         a(href="#").btn-up
           +icon("arrow_down", "arrow-up-link")
