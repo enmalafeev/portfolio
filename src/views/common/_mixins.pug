@@ -20,7 +20,7 @@ mixin nav(className, items)
           a(class=`${className}__link` href=`${item.link}`)= item.title
 
 mixin socials(socials, modClass)
-  ul.socials
+  ul.socials(class=`${modClass}__list`)
     each item in socials
       li.socials__item(class=`${modClass}`)
         a(href=`${item[1]}`).socials__link

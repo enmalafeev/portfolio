@@ -1,5 +1,10 @@
 .map {
     display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/images/map.jpg') no-repeat center / cover;
+
+    margin-bottom: 179px;
 }
 
 .map__data {
@@ -10,11 +15,14 @@
     border-radius: 5px;
 
     margin: auto;
+
+    @include tablets {
+        width: 50%;
+    }
 }
 
-.google-map {
-    width: 100px;
-    height: auto;
-    background: url('assets/images/map.jpg') no-repeat center;
-    height: auto;
-}
+// .google-map {
+//     width: 100%;
+//     height: auto;
+//     background: url('assets/images/map.jpg') no-repeat center;
+// }

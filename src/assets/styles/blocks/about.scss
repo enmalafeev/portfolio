@@ -11,6 +11,7 @@
     &__left {
         display: flex;
         flex-direction: column;
+        justify-content: center;
 
         width: 50%;
         background-color: #efeee9;
@@ -52,13 +53,24 @@
 
     margin: auto;
     padding-bottom: 40px;
+
+
 }
 
 .about__left-content {
-    padding-left: 80px;
-    padding-right: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .about__right-description {
     padding-left: 40px;
+
+    @include tablets {
+        padding: 0;
+        font-size: 14px;
+        width: 70%;
+        margin: 0 auto;
+    }
 }

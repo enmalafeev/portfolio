@@ -8,7 +8,7 @@ script(type="text/x-template")#skills-list
 
 
 script(type="text/x-template")#skills-row
-  li.skills-list__item.skills-row
+  li.skills-list__item
     h3.skills-row__title {{ skill.skillsGroup }}
     ul.skills-row__list
         li.skills-row__item(v-for="(skillPercent, skillName) in skill.skills")

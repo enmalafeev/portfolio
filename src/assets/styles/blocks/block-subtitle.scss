@@ -11,7 +11,7 @@
     text-align: center;
     position: relative;
 
-    padding: 40px;
+    padding: 35px;
 
     &::before,
     &::after {
@@ -33,6 +33,11 @@
         top: 50%;
         right: 0;
     }
+
+    @include tablets {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
 }
 
 .big-title {
@@ -47,14 +52,16 @@
 
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include tablets {
+        font-size: 49px;
+    }
 }
 
 .block-subtitle__center {
     width: 50%;
     text-align: center;
     margin: 0 auto;
-
-    margin-bottom: 35px;
 }
