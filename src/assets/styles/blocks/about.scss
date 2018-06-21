@@ -73,4 +73,9 @@
         width: 70%;
         margin: 0 auto;
     }
+
+    @include small-phones {
+        width: 90%;
+        line-height: 1.7;
+    }
 }

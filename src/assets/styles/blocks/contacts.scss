@@ -4,11 +4,16 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+
+    @include small-phones {
+        background-color: #fff;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 
 .contacts__title {
     align-self: center;
-
 }
 
 .contacts__link {

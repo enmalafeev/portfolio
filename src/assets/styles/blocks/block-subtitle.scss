@@ -38,6 +38,10 @@
         font-size: 30px;
         padding-bottom: 20px;
     }
+
+    @include small-phones {
+        font-size: 21px;
+    }
 }
 
 .big-title {
@@ -58,10 +62,16 @@
     @include tablets {
         font-size: 49px;
     }
+
+
 }
 
 .block-subtitle__center {
     width: 50%;
     text-align: center;
     margin: 0 auto;
+
+    @include small-phones {
+        width: 70%;
+    }
 }

@@ -27,12 +27,28 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+
+        @include small-phones {
+            width: 90%;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
     }
 
     &__item:not(:last-child) {
         margin-right: 40px;
         position: relative;
+
+        @include small-phones {
+            margin-bottom: 30px;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
     }
+
     &__title {
         font-size: 28px;
         font-weight: 500;
@@ -54,6 +70,11 @@
 
     @include tablets {
         justify-content: space-between;
+    }
+
+    @include small-phones {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
 }

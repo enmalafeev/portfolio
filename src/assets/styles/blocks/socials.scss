@@ -7,6 +7,10 @@
 
 .footer-round__list {
     width: 135px;
+
+    @include small-phones {
+        margin-bottom: 20px;
+    }
 }
 
 .socials__link {

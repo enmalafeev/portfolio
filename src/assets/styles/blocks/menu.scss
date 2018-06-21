@@ -3,23 +3,32 @@
     padding-top: 30px;
     padding-bottom: 30px;
 
-     @include tablets {
-        padding-bottom: 20px;
-     }
+    @include tablets {
+        padding: 20px;
+    }
 
     &__list {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
 
-         @include tablets {
-             width: 100%;
-             justify-content: center;
-         }
+        @include tablets {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @include small-phones {
+            width: 100%;
+            justify-content: space-around;
+        }
     }
 
     &__item {
         margin-right: 40px;
+
+        @include small-phones {
+            margin-right: 0;
+        }
     }
 
     &__link {
@@ -31,6 +40,10 @@
         &:active {
             color: $green;
             transition: all 0.5s ease-out;
+        }
+
+        @include small-phones {
+            font-size: 13px;
         }
     }
 }

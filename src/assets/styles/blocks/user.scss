@@ -84,6 +84,11 @@
     @include tablets {
         width: 60%;
     }
+
+    @include small-phones {
+        width: 100%;
+    }
+
 }
 
 .user-desc__data {
@@ -104,6 +109,10 @@
 
     @include tablets {
         width: 60%;
+    }
+
+    @include small-phones {
+        width: 90%;
     }
 }
 

@@ -23,6 +23,10 @@
     padding-right: 30px;
     border-bottom: 1px solid #fff;
     opacity: 0.5;
+
+    @include tablets {
+        padding-right: 0;
+    }
 }
 
 .footer__col_justify_end {
@@ -33,12 +37,19 @@
 
     padding-right: 30px;
 
-     @include tablets {
+    @include tablets {
         width: 100%;
         justify-content: center;
 
         padding-bottom: 20px;
-     }
+    }
+
+    @include small-phones {
+        justify-content: center;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
 
 .footer__text {
@@ -52,6 +63,14 @@
         width: 100%;
         margin: 0 auto;
         text-align: center;
+    }
+
+    @include small-phones {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
