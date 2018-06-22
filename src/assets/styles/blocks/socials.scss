@@ -16,7 +16,12 @@
 .socials__link {
     display: block;
     width: 32px;
-    height: 22px;
+    height: 24px;
+
+    @include tablets {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 .socials__link-icon {
@@ -32,10 +37,7 @@
         transition: all 0.5s ease-out;
     }
 
-    @include tablets {
-        width: 35px;
-        height: 35px;
-    }
+    
 }
 
 .socials__fill-green {
