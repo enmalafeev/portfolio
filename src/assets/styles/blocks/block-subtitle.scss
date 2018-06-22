@@ -26,17 +26,18 @@
 
     &::before {
         top: 50%;
+        transform: translateY(-50%);
         left: 0;
     }
 
     &::after {
         top: 50%;
+        transform: translateY(-50%);
         right: 0;
     }
 
     @include tablets {
         font-size: 30px;
-        padding-bottom: 20px;
     }
 
     @include small-phones {
