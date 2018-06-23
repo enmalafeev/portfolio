@@ -1,5 +1,5 @@
 .reviews-block {
-  width: 100vw;
+  width: 100%;
   position: relative;
 
   &__list {
@@ -7,16 +7,36 @@
     width: 62.5%;
     margin: 0 auto;
     margin-bottom: 70px;
+
+    @include tablets {
+      width: 95%;
+      margin-bottom: 50px;
+    }
+
+    @include phones {
+      width: 95%;
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
   }
 
   &__item {
     margin-right: 35px;
     width: 50%;
+
+    @include phones {
+      width: 95%;
+      padding-top: 50px;
+    }
   }
 
   &__text {
     position: relative;
     margin-bottom: 25px;
+
+    @include phones {
+      margin-bottom: 10px;
+    }
 
     &::before {
       position: absolute;
@@ -28,6 +48,10 @@
       left: 0;
 
       background: url("assets/images/quotes.png") no-repeat center;
+
+      @include phones {
+        left: 50%;
+      }
     }
   }
 
@@ -40,6 +64,11 @@
     width: 77px;
     height: 77px;
     border-radius: 50%;
+
+    @include phones {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &__name-wrap {
@@ -58,6 +87,16 @@
 
 .reviews__arrow-scroll {
   margin-bottom: 215px;
+
+  @include tablets {
+    margin-bottom: 340px;
+  }
+
+  @include phones{
+    margin-bottom: 330px;
+  }
+
+
 }
 
 

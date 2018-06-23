@@ -3,6 +3,14 @@
     opacity: 0.85;
     margin-top: -179px;
 
+    @include tablets {
+        margin-top: -290px;
+    }
+
+    @include phones {
+        margin-top: -290px;
+    }
+
     &__row {
         display: flex;
         flex-direction: row;

@@ -1,14 +1,9 @@
-@mixin tablets {
-    @media screen and (max-width:768px) {
-        @content;
-    }
-}
-
 .slider {
     height: 100vh;
     min-height: 650px;
     background-color: #f0efe9;
     display: grid;
+    overflow: hidden;
     grid-template:
         "info display" 70%
         "info buttons" 30%
@@ -16,10 +11,11 @@
 
     @include tablets {
         grid-template:
-        "display" 400px
-        "info" 300px
-        "buttons" 200px
+        "display" 45%
+        "info" 35%
+        "buttons" 20%
         / 1fr;
+        height: 100vh;
     }
 }
 
@@ -32,6 +28,25 @@
     border-top: 1px solid $green;
     border-bottom: 1px solid $green;
     margin-bottom: 40px;
+
+    @include tablets {
+        margin-bottom: 20px;
+    }
+
+    @include phones {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+.slider__info-title {
+
+    @include phones {
+        width: 75%;
+        margin-top: 20px;
+    }
+
 }
 
 .slider__info-container {
@@ -40,6 +55,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .slider__display {
@@ -82,7 +99,7 @@
         content: "";
         top: 50%;
         left: 50%;
-        transform: translate(-50% -50%);
+        transform: translate(-50%, -50%);
         width: 44px;
         height: 29px;
         background: svg-load('arrow_down.svg' fill="#fff") no-repeat center / contain;
@@ -92,7 +109,8 @@
 
     &--next {
         &::after {
-            transform: rotate(180deg);
+            transform: translate(-50%, -50%)
+            rotate(180deg);
         }
     }
 }

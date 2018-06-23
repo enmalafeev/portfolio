@@ -8,8 +8,6 @@ var blur = (function() {
         posTop = -wrapper.offsetTop,
         blurCSS = form.style;
 
-      console.log(imgWidth);
-
       blurCSS.backgroundSize = `${imgWidth}px auto`;
       // blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
     }

@@ -38,10 +38,14 @@
 
     @include tablets {
         font-size: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     @include small-phones {
         font-size: 21px;
+        padding: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -62,6 +66,12 @@
 
     @include tablets {
         font-size: 49px;
+    }
+
+    @include phones {
+        font-size: 35px;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
 
