@@ -1,6 +1,7 @@
 .article {
 
-    &__item {
+    &__item:not(:last-child
+    ) {
         margin-bottom: 140px;
 
         position: relative;
@@ -17,6 +18,14 @@
             bottom: -70px;
             left: 0;
         }
+
+        @include tablets {
+            margin-bottom: 60px;
+
+            &::after {
+                bottom: -30px;
+            }
+        }
     }
 
     &__title {
@@ -25,6 +34,15 @@
         color: $grey;
 
         margin-bottom: 20px;
+
+        @include tablets {
+            font-size: 30px;
+        }
+
+        @include phones {
+            font-size: 21px;
+        }
+
     }
 
     &__date {

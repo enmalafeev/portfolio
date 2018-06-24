@@ -1,17 +1,79 @@
 .blog-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
     padding-top: 70px;
+    position: relative;
+
+    @include tablets {
+        padding-top: 30px;
+    }
 }
 
 .blog-left {
     width: 30%;
     padding-right: 120px;
+
+    position: absolute;
+    top: 90px;
+    left: 45px;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .blog-right {
-    width: 70%;
+    width: 100%;
     margin-bottom: 300px;
+
+    padding-left: 30%;
+
+    @include tablets {
+        width: 90%;
+        padding-left: 0;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 320px;
+    }
 }
+
+.fixed {
+    position: fixed;
+    top: 70px;
+    left: 45px;
+}
+
+.swipe-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 90%;
+    height: 100vh;
+    background-color: $green;
+}
+
+.swiper {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    box-shadow: 5px 5px 1em #ccc;
+}
+
+.swipe-sidebar__item {
+    color: #fff;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.swipe-sidebar--active-item {
+    opacity: 1;
+}
+
+

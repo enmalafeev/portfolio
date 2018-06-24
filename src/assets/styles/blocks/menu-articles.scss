@@ -3,13 +3,13 @@
     &__item {
         margin-bottom: 30px;
         text-align: right;
-
-        position: relative;
     }
 
     &__link {
         color: $grey;
         text-decoration: none;
+        padding: 15px 0;
+        position: relative;
 
         &:hover,
         &:active {
