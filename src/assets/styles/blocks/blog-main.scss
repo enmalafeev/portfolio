@@ -16,9 +16,58 @@
     left: 45px;
 
     @include tablets {
-        display: none;
+        background-color: $green;
+        color: #fff;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -30%;
+        padding-top: 70px;
+        padding-left: 20px;
+        padding-right: 20px;
+        z-index: 20;
+
+    }
+
+    @include phones {
+        width: 90%;
+        left: -90%;
     }
 }
+
+.swiper-wrap {
+    width: 15px;
+    height: 60px;
+    overflow: hidden;
+
+    position: absolute;
+    top: 50%;
+    right: -15px;
+
+}
+
+.swiper {
+    display: none;
+    padding: 0;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: $green;
+    border-radius: 50%;
+    z-index: 10;
+
+    position: absolute;
+    top: 0;
+    left: -45px;
+
+    outline: none;
+
+    @include tablets{
+        display: block;
+    }
+}
+
+
 
 .blog-right {
     width: 100%;
@@ -37,8 +86,8 @@
 
 .fixed {
     position: fixed;
-    top: 70px;
-    left: 45px;
+    top: 0;
+    left: 0;
 }
 
 .swipe-sidebar {
@@ -51,16 +100,6 @@
     background-color: $green;
 }
 
-.swiper {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background-color: $green;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    box-shadow: 5px 5px 1em #ccc;
-}
 
 .swipe-sidebar__item {
     color: #fff;

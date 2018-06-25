@@ -16,6 +16,18 @@
             color: $green;
             transition: all 0.5s ease-out;
         }
+
+        @include tablets {
+            color: #fff;
+            opacity: 0.7;
+
+            &:hover,
+            &:active {
+                color: #fff;
+                opacity: 1;
+                transition: all 0.5s ease-out;
+            }
+        }
     }
 }
 
