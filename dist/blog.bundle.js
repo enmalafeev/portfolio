@@ -1,1 +1,1 @@
-webpackJsonp([3],{11:function(module,exports,__webpack_require__){"use strict";eval("\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIxMS5qcyIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///11\n")}},[11]);
+webpackJsonp([3],{11:function(e,t,c){"use strict";c(12)},12:function(e,t,c){"use strict";var n=document.querySelector(".swiper"),i=document.querySelector(".blog-left");n.addEventListener("click",function(e){i.classList.toggle("fixed")})}},[11]);

@@ -27,46 +27,47 @@ block content
             img(src="assets/images/work-4.png", alt="work4").slider__button-pic
 
     section.reviews
-      .reviews__title
-        h2.big-title Что обо мне говорят
-      .reviews-block
-        -
-          var listReview = [
-            {
-              text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
-              avatar: 'assets/images/ava1.png',
-              name: 'Ковальчук Дмитрий',
-              status: 'основатель LoftSchool'
-            },{
-              text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
-              avatar: 'assets/images/ava2.png',
-              name: 'Сабанцев Владимир',
-              status: 'преподаватель LoftSchool'
-            }
-          ]
-        ul.reviews-block__list
-          each item in listReview
-            li.reviews-block__item
-              p.reviews-block__text= item.text
-              .reviews-block__info
-                img(src=`${item.avatar}`).reviews-block__img-pic
-                .reviews-block__name-wrap
-                  p.reviews-block__name= item.name
-                  p.reviews-block__status= item.status
-      .blur-form-wrapper
-        .blur-form
-        .contact-me
-          h3.contact-me__title.block-subtitle Связаться со мной
-          form.contact-me__form(action="post")
-            input.contact-me__name(type="text", name="name" placeholder="Имя")
-            input.contact-me__email(type="email" name="email" placeholder="Email")
-            textarea.contact-me__message(name="message", placeholder="Ваше сообщение")
-        .form-btn-wrap
-          button.btn-form.btn-send(type="submit") Отправить
-          button.btn-form.btn-clear(type="button") Очистить
-      .reviews__arrow-scroll
-        a(href="#").btn-up
-          +icon("arrow_down", "arrow-up-link")
+      .container
+        .reviews__title
+          h2.big-title Что обо мне говорят
+        .reviews-block
+          -
+            var listReview = [
+              {
+                text: 'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+                avatar: 'assets/images/ava1.png',
+                name: 'Ковальчук Дмитрий',
+                status: 'основатель LoftSchool'
+              },{
+                text: 'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+                avatar: 'assets/images/ava2.png',
+                name: 'Сабанцев Владимир',
+                status: 'преподаватель LoftSchool'
+              }
+            ]
+          ul.reviews-block__list
+            each item in listReview
+              li.reviews-block__item
+                p.reviews-block__text= item.text
+                .reviews-block__info
+                  img(src=`${item.avatar}`).reviews-block__img-pic
+                  .reviews-block__name-wrap
+                    p.reviews-block__name= item.name
+                    p.reviews-block__status= item.status
+        .blur-form-wrapper
+          .blur-form
+          .contact-me
+            h3.contact-me__title.block-subtitle Связаться со мной
+            form.contact-me__form(action="post")
+              input.contact-me__name(type="text", name="name" placeholder="Имя")
+              input.contact-me__email(type="email" name="email" placeholder="Email")
+              textarea.contact-me__message(name="message", placeholder="Ваше сообщение")
+          .form-btn-wrap
+            button.btn-form.btn-send(type="submit") Отправить
+            button.btn-form.btn-clear(type="button") Очистить
+        .reviews__arrow-scroll
+          a(href="#").btn-up
+            +icon("arrow_down", "arrow-up-link")
 
 
 block scripts

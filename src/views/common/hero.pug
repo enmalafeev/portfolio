@@ -1,32 +1,35 @@
 section.hero
-  block header
-    include ../common/header.pug
-  
-  .hero__title
-    -if (title == 'Блог')
-      .section-title-blog
-    - else
-      .section-title
+  .container
+    block header
+      include ../common/header.pug
 
-    .user.hero__user
-      .user__img
-        +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
-      .user__desc
-        h1.user__name Евгений Малафеев
-        - if (title == 'Блог')
-          p.user-info Статьи, которые я написал
-        - else
-          p.user__info Личный сайт веб-разработчика
+    .hero__title
+      -if (title == 'Блог')
+        .section-title-blog
+      - else
+        .section-title
 
-  .hero__arrow-scroll
-    a(href="#").btn-down
-      +icon("arrow_down", "arrow-down-link")
+      .user.hero__user
+        .user__img
+          +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
+        .user__desc
+          - if (title == 'Блог')
+            h1.big-title.big-title--blog Блог
+            p.user-info Статьи, которые я написал
+          - else
+            p.user__info Личный сайт веб-разработчика
+            h1.user__name Евгений Малафеев
 
-  .triangles
-    - if (title == 'Обо мне')
-      +triangles('triangles-about', 'fillGrey', 'fillBright')
-    - if (title == 'Мои работы')
-      +triangles('triangles-works')
-    - if (title == 'Блог')
-      +triangles('triangles-white')
+
+    .hero__arrow-scroll
+      a(href="#").btn-down
+        +icon("arrow_down", "arrow-down-link")
+
+    .triangles
+      - if (title == 'Обо мне')
+        +triangles('triangles-about', 'fillGrey', 'fillBright')
+      - if (title == 'Мои работы')
+        +triangles('triangles-works')
+      - if (title == 'Блог')
+        +triangles('triangles-white')
 

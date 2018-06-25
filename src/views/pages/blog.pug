@@ -3,11 +3,14 @@ extends ../main.layout.pug
 block variables
   - var title = 'Блог'
 
+block scripts
+  script(src='blog.bundle.js')
 
 block content
   include ../common/hero.pug
 
   section.blog-main
+    .container
       .blog-left
         .blog-menu
           -
