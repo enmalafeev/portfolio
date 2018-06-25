@@ -5,6 +5,7 @@
     padding: 0;
 
     outline: none;
+    transition: .5s ease-in-out;
 
     @include phones {
         width: 25px;
@@ -16,12 +17,64 @@
     fill: #fff;
     width: 100%;
     height: 100%;
+    position: relative;
+    z-index: 20;
 
-    &:hover,
-    &:active {
-        transition: 0.5s;
-        opacity: 0.7;
+}
+
+.header__menu-strip-1,
+.header__menu-strip-2,
+.header__menu-strip-3 {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    fill: #fff;
+    transition: .25s ease-in-out;
+}
+
+.header__menu-strip-1 {
+    top: 0;
+    transform-origin: left center;
+}
+
+.header__menu-strip-2 {
+    top: 15px;
+    transform-origin: left center;
+
+    @include phones {
+        top: 7px;
     }
+}
 
-    
+.header__menu-strip-3 {
+    top: 30px;
+    transform-origin: left center;
+
+    @include phones {
+        top: 15px;
+    }
+}
+
+.header__menu-strip-1.open {
+    position: absolute;
+    transform: rotate(45deg);
+    top: 0;
+    left: 4px;
+}
+
+.header__menu-strip-2.open {
+    width: 0%;
+    opacity: 0;
+}
+
+.header__menu-strip-3.open {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 29px;
+    left: 4px;
+
+    @include phones {
+        top: 18px;
+    }
 }

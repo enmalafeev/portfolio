@@ -17,6 +17,14 @@
 
     &__menu {
         margin-right: 30px;
+        position: relative;
+        z-index: 20;
+
+        &:hover,
+        &:active {
+            transition: 0.5s;
+            opacity: 0.7;
+        }
     }
 
     &__hamburger {
