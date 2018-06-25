@@ -1,47 +1,66 @@
 extends ../auth.layout.pug
 
 block content
-  .wrapper
-    main.main-content
-      button(href="#").login-btn.auth-btn Авторизоваться
-      .user-wrap.main-content__center
-        .login
-          h2.login__title.block-subtitle Авторизуйтесь
-          form(name="login-form" method="post").login__form
-            .input-cnt
-              .input-wrap
-                .input__img
-                  +icon("login", "input__img-svg")
-                input(type="text" name="login" placeholder="Логин").login__input
-              .input-wrap
-                .input__img
-                  +icon("password", "input__img-svg")
-                input(type="password" name="password" placeholder="Пароль").login__input
-            .checkbox-cnt
-              input(type="checkbox" name="human" id="human").login__checkbox-human.visually-hidden
-              label(for="human").login__label-checkbox-human Я человек
-            fieldset.login__robot-check
-                legend Вы точно не робот?
-                .checkbox-cnt
-                    input(type="radio" name="robot-checkbox" id="robot-yes").login__checkbox-robot.visually-hidden
-                    label(for="robot-yes").login__label-checkbox-robot Да
-                    input(type="radio" name="robot-checkbox" id="robot-no").login__checkbox-robot.visually-hidden
-                    label(for="robot-no").login__label-checkbox-robot Не уверен
-          +nav('main-menu', ['На главную', 'Войти'])
-        .user
-          .user__img
-            +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
-          .user__desc.user__decs--black
-            h1.user__name Евгений Малафеев
-            p.user__info Личный сайт веб-разработчика
-        -
-          var socials = [
-            ["vk", "https://vk.com/enmalafeev"],
-            ["github", "https://github.com/enmalafeev"],
-            ["in", "https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D0%BC%D0%B0%D0%BB%D0%B0%D1%84%D0%B5%D0%B5%D0%B2-14403a120/"]
-          ]
-        .user__wrap-links
-          +socials(socials, 'socials__fill-green')
-        +nav('main-menu', [ {title: 'Мои работы', link: 'works.html' }, {title: 'Обо мне', link: 'about.html'}, {title: 'Блог', link: 'blog.html' }])
-      footer.main-footer
-        p &#169 Евгений Малафеев | Создано с любовью в LoftSchool 2018
+  .parallax
+    .parallax__layer
+      +image("layer0.png", "layer0", "parallax__img")
+    .parallax__layer
+      +image("layer1.png", "layer1", "parallax__img")
+    .parallax__layer
+      +image("layer2.png", "layer2", "parallax__img")
+    .parallax__layer
+      +image("layer3.png", "layer3", "parallax__img")
+    .parallax__layer
+      +image("layer4.png", "layer4", "parallax__img")
+    .parallax__layer
+      +image("layer5.png", "layer5", "parallax__img")
+    .parallax__layer
+      +image("layer6.png", "layer6", "parallax__img")
+    .parallax__layer
+      +image("layer7.png", "layer7", "parallax__img")
+    .parallax__layer
+      +image("layer8.png", "layer8", "parallax__img")
+    .parallax__layer
+      +image("layer9.png", "layer9", "parallax__img")
+      //- button(href="#").login-btn.auth-btn Авторизоваться
+      //- .user-wrap.main-content__center
+      //-   .login
+      //-     h2.login__title.block-subtitle Авторизуйтесь
+      //-     form(name="login-form" method="post").login__form
+      //-       .input-cnt
+      //-         .input-wrap
+      //-           .input__img
+      //-             +icon("login", "input__img-svg")
+      //-           input(type="text" name="login" placeholder="Логин").login__input
+      //-         .input-wrap
+      //-           .input__img
+      //-             +icon("password", "input__img-svg")
+      //-           input(type="password" name="password" placeholder="Пароль").login__input
+      //-       .checkbox-cnt
+      //-         input(type="checkbox" name="human" id="human").login__checkbox-human.visually-hidden
+      //-         label(for="human").login__label-checkbox-human Я человек
+      //-       fieldset.login__robot-check
+      //-           legend Вы точно не робот?
+      //-           .checkbox-cnt
+      //-               input(type="radio" name="robot-checkbox" id="robot-yes").login__checkbox-robot.visually-hidden
+      //-               label(for="robot-yes").login__label-checkbox-robot Да
+      //-               input(type="radio" name="robot-checkbox" id="robot-no").login__checkbox-robot.visually-hidden
+      //-               label(for="robot-no").login__label-checkbox-robot Не уверен
+      //-     +nav('main-menu', ['На главную', 'Войти'])
+      //-   .user
+      //-     .user__img
+      //-       +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
+      //-     .user__desc.user__decs--black
+      //-       h1.user__name Евгений Малафеев
+      //-       p.user__info Личный сайт веб-разработчика
+      //-   -
+      //-     var socials = [
+      //-       ["vk", "https://vk.com/enmalafeev"],
+      //-       ["github", "https://github.com/enmalafeev"],
+      //-       ["in", "https://www.linkedin.com/in/%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D0%BC%D0%B0%D0%BB%D0%B0%D1%84%D0%B5%D0%B5%D0%B2-14403a120/"]
+      //-     ]
+      //-   .user__wrap-links
+      //-     +socials(socials, 'socials__fill-green')
+      //-   +nav('main-menu', [ {title: 'Мои работы', link: 'works.html' }, {title: 'Обо мне', link: 'about.html'}, {title: 'Блог', link: 'blog.html' }])
+      //- footer.main-footer
+      //-   p &#169 Евгений Малафеев | Создано с любовью в LoftSchool 2018
