@@ -28,6 +28,17 @@
     border-top: 1px solid $green;
     border-bottom: 1px solid $green;
     margin-bottom: 40px;
+    font-size: 0;
+    span {
+        display: inline-block;
+        font-size: 14px;
+
+        &.whitespace {
+            &:after {
+                content: "\00a0";
+            }
+        }
+    }
 
     @include tablets {
         margin-bottom: 20px;
@@ -186,4 +197,39 @@
     bottom: 0%;
 }
 
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
 
+.bounceIn {
+    animation-duration: 0.5s;
+    animation-name: bounceIn;
+}

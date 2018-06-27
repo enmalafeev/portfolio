@@ -16,7 +16,14 @@ script(type="text/x-template")#slider-info
     .slider__info-container
         .slider__info-title
             h2.block-subtitle {{ work.title }}
-        .slider__info-skills {{ work.skills }}
+        transition-group(
+            appear
+            :css="false"
+            @before-enter="callback('before-enter')"
+            @after-enter="callback('after-enter')"
+            @enter="enterHandler"
+        )
+            .slider__info-skills(:key="work.skills") {{ work.skills }}
         .slider__info-button
             a(:href="work.link" target="_blank").btn-show-portfolio-site Посмотреть сайт
 
