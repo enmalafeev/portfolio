@@ -1,5 +1,4 @@
 .main-footer {
-    flex: 0 0 auto;
     color: #fff;
 }
 
@@ -14,6 +13,7 @@
 
     @include phones {
         font-size: 0.875rem;
+        padding-bottom: 0;
     }
 }
 

@@ -6,6 +6,15 @@
   bottom: 0;
 
   background-color: #bfccc5;
+
+  @include tablets {
+    background: url("assets/images/bg768.jpg") no-repeat center / cover;
+  }
+
+  @include phones {
+    background: url("assets/images/bg320.jpg") no-repeat center / cover;
+  }
+
 }
 
 .parallax__layer {
@@ -14,6 +23,11 @@
   left: 0;
   width: 100%;
   height: 100vh;
+
+  @include tablets {
+    display: none;
+  }
+
 }
 
 .parallax__img {
@@ -23,4 +37,8 @@
   transform: translate3d(-50%, 0, 0);
   width: 110%;
   will-change: transform;
+
+  @include tablets {
+    display: none;
+  }
 }

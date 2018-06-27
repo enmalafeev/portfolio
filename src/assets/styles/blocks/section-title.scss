@@ -3,6 +3,7 @@
     height: 313px;
     background: url("assets/images/portfolio_header.png") no-repeat center;
 
+
     @include tablets {
         background: none;
     }

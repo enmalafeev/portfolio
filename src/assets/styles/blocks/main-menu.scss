@@ -14,28 +14,29 @@
 
     &__link {
         display: block;
+        text-align: center;
         width: 100%;
         text-decoration: none;
         color: #fff;
 
-        padding-left: 2rem;
-        padding-right: 2rem;
+        // padding-left: 2rem;
+        // padding-right: 2rem;
 
-        @include tablets {
-            padding-left: 1.625rem;
-            padding-right: 1.625rem;
-        }
+        // @include tablets {
+        //     padding-left: 1.625rem;
+        //     padding-right: 1.625rem;
+        // }
 
-        @include phones {
-            font-size: 0.875rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
+        // @include phones {
+        //     font-size: 0.875rem;
+        //     padding-left: 1rem;
+        //     padding-right: 1rem;
+        // }
 
-        @include small-phones {
-            padding-left: 0.9rem;
-            padding-right: 0.9rem;
-        }
+        // @include small-phones {
+        //     padding-left: 0.9rem;
+        //     padding-right: 0.9rem;
+        // }
 
         &:hover,
         &:active {
