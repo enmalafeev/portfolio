@@ -3,28 +3,32 @@ extends ../main.layout.pug
 block variables
   - var title = 'Мои работы'
 
+block scripts
+  script(src='works.bundle.js')
+
 block content
   include ../common/hero.pug
 
   section.my-works
     .my-works__title
       h1.big-title Мои работы
-    .slider
-      .slider__info-container
-        .slider__info-title
-          h2.block-subtitle Сайт школы онлайн образования
-        .slider__info-skills HTML, CSS, JavaScript
-        .slider__info-button
-          a(href="#").btn-show-portfolio-site Посмотреть сайт
-      .slider__display
-        img(src="assets/images/work-1.png" alt="").slider__big-pic
-      .slider__buttons
-        .slider__button
-          .slider__button-img-wrap
-            img(src="assets/images/work-2.png", alt="work2").slider__button-pic
-        .slider__button.slider__button--next
-          .slider__button-img-wrap
-            img(src="assets/images/work-4.png", alt="work4").slider__button-pic
+    #slider-component
+    //- .slider
+    //-   .slider__info-container
+    //-     .slider__info-title
+    //-       h2.block-subtitle Сайт школы онлайн образования
+    //-     .slider__info-skills HTML, CSS, JavaScript
+    //-     .slider__info-button
+    //-       a(href="#").btn-show-portfolio-site Посмотреть сайт
+    //-   .slider__display
+    //-     img(src="assets/images/work-1.png" alt="").slider__big-pic
+    //-   .slider__buttons
+    //-     .slider__button
+    //-       .slider__button-img-wrap
+    //-         img(src="assets/images/work-2.png", alt="work2").slider__button-pic
+    //-     .slider__button.slider__button--next
+    //-       .slider__button-img-wrap
+    //-         img(src="assets/images/work-4.png", alt="work4").slider__button-pic
 
     section.reviews
       .container

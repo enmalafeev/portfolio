@@ -59,6 +59,7 @@
     padding-bottom: 20px;
 }
 
+
 .slider__display {
     grid-area: display;
     background-color: #efebe0;
@@ -129,12 +130,12 @@
     top: 0;
     left: 0;
 
-     display: flex;
-     justify-content: center;
-     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider__button-pic {
+.slider__btn-pic {
     display: block;
     max-width: 90%;
     max-height: 90%;

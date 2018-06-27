@@ -1,23 +1,35 @@
 script(type="text/x-template")#slider
     .slider
-        .info
-        .display
-        .buttons
+        info(
+            :work="currentWork"
+        )
+        display(
+            :work="currentWork"
+        )
+        buttons(
+            :works="works",
+            :currentIndex="currentIndex",
+            @slide="handleSlide"
+        )
 
 script(type="text/x-template")#slider-info
     .slider__info-container
         .slider__info-title
-            h2.block-subtitle Сайт школы онлайн образования
-            .slider__info-skills HTML, CSS, JavaScript
-            .slider__info-button
-                a(href="#").btn-show-portfolio-site Посмотреть сайт
+            h2.block-subtitle {{ work.title }}
+        .slider__info-skills {{ work.skills }}
+        .slider__info-button
+            a(:href="work.link" target="_blank").btn-show-portfolio-site Посмотреть сайт
 
 script(type="text/x-template")#slider-display
     .slider__display
-        img(src="assets/images/work-1.png", alt="work1").slider__img-pic
+        img(:src="work.photo", alt="work1").slider__big-pic
 
 script(type="text/x-template")#slider-buttons
-    .slider__button
-        .slider__button-img-wrap
-            img(src="assets/images/work-4.png", alt="work4").slider__btn-pic
-            img(src="assets/images/work-4.png", alt="work4").slider__btn-pic.slider__btn-pic--next
+    .slider__buttons
+        .slider__button(@click="slide('prev')")
+            .slider__button-img-wrap
+                img(:src="getReqImage('prev').photo").slider__btn-pic
+        .slider__button.slider__button--next(@click="slide('next')")
+            .slider__button-img-wrap
+                img(:src="getReqImage('next').photo").slider__btn-pic
+
