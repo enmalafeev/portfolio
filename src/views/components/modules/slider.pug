@@ -27,9 +27,11 @@ script(type="text/x-template")#slider-display
 script(type="text/x-template")#slider-buttons
     .slider__buttons
         .slider__button(@click="slide('prev')")
-            .slider__button-img-wrap
-                img(:src="getReqImage('prev').photo").slider__btn-pic
+            transition-group(name="slide-down" tag="div").slider__button-img-cnt
+                .slider__button-img-wrap(:key="getReqImage('prev').photo")
+                    img(:src="getReqImage('prev').photo").slider__btn-pic
         .slider__button.slider__button--next(@click="slide('next')")
-            .slider__button-img-wrap
-                img(:src="getReqImage('next').photo").slider__btn-pic
+            transition-group(name="slide-up" tag="div").slider__button-img-cnt
+                .slider__button-img-wrap(:key="getReqImage('next').photo")
+                    img(:src="getReqImage('next').photo").slider__btn-pic
 
