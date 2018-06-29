@@ -1,9 +1,13 @@
 .user {
-    // text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding-top: 40px;
+
+    @include phones {
+        padding-top: 25px;
+    }
 
     &__img {
         display: inline-block;
@@ -55,18 +59,12 @@
 
 .user-wrap {
     width: 380px;
-    overflow: hidden;
+    height: 410px;
     align-self: center;
 
-    background-color: #fff;
-    opacity: 0.85;
-    border-radius: 5px;
-    padding-top: 40px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #000;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 
     @include tablets {
         width: 350px;
@@ -75,10 +73,38 @@
 
     @include phones {
         width: 300px;
-        padding-top: 25px;
         margin-left: 10px;
         margin-right: 10px;
     }
+}
+
+.user-wrap--flipped {
+    .user {
+        transform: rotateY(180deg);
+    }
+
+    .login {
+        transform: rotateY(360deg);
+    }
+}
+
+
+.user,
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    opacity: 0.85;
+    border-radius: 5px;
+
+    transition: 1s;
+    backface-visibility: hidden;
+
+    overflow: hidden;
 }
 
 .user__wrap-links {
