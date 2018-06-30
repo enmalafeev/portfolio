@@ -1,27 +1,23 @@
-var blur = (function() {
-  var wrapper = document.querySelector(".reviews"),
-    form = document.querySelector(".blur-form");
+const blur = (function () {
+  const wrapper = document.querySelector(".reviews");
+  const form = document.querySelector(".blur-form");
   return {
     set: () => {
-      const imgWidth = document.querySelector(".reviews").offsetWidth;
-      const posLeft = -wrapper.offsetLeft;
-      const posTop = -wrapper.offsetTop;
+      // соотношение ширины и высоты бекграунда
+      const review = document.querySelector(".reviews");
+      const formWrapper = document.querySelector('.blur-form-wrapper');
+      const topReview = review.offsetTop;
+      const heightReview = review.getBoundingClientRect().height;
+      const wrapperTop = formWrapper.offsetTop;
+      const dif = topReview - wrapperTop;
       const blurCSS = form.style;
-      const formTop = form.offsetTop;
-      const res = formTop + posTop;
-      const posBottom = -(form.offsetTop + form.getBoundingClientRect().height);
 
-      blurCSS.backgroundSize = `${imgWidth}px auto`;
-      blurCSS.backgroundPosition = posLeft + "px" + " " + posBottom + "px";
-      // console.log(posBottom);
-
-      // blurCSS.backgroundPosition = "10px";
+      blurCSS.backgroundSize = `auto ${heightReview}px`;
+      blurCSS.backgroundPosition = `${-formWrapper.offsetLeft}px ${dif}px`;
     }
   };
 })();
-
 blur.set();
-
-window.onresize = function() {
+window.onresize = function () {
   blur.set();
 };

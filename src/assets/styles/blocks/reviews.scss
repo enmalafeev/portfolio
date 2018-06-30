@@ -1,13 +1,11 @@
 .reviews {
-  width: 100vw;
-  // min-width: 900px;
-  background: url("assets/images/bg-works.jpg") no-repeat 50% 100% / contain;
+  width: auto;
+  background: url("assets/images/bg-works.jpg") no-repeat 0 0;
+  background-size: auto 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  // background-color: green;
 }
 
 .reviews__title {
