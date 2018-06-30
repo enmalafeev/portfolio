@@ -13,6 +13,11 @@
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+  max-height: 100vh;
+}
+
 .menu-overlay {
   width: 390px;
   text-align: center;
@@ -48,7 +53,7 @@
     }
 
     &:hover,
-    &active {
+    &:active {
 
       &::before,
       &::after {
