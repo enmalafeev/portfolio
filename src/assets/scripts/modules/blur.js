@@ -3,13 +3,19 @@ var blur = (function() {
     form = document.querySelector(".blur-form");
   return {
     set: () => {
-      var imgWidth = document.querySelector(".reviews").offsetWidth,
-        posLeft = -wrapper.offsetLeft,
-        posTop = -wrapper.offsetTop,
-        blurCSS = form.style;
+      const imgWidth = document.querySelector(".reviews").offsetWidth;
+      const posLeft = -wrapper.offsetLeft;
+      const posTop = -wrapper.offsetTop;
+      const blurCSS = form.style;
+      const formTop = form.offsetTop;
+      const res = formTop + posTop;
+      const posBottom = -(form.offsetTop + form.getBoundingClientRect().height);
 
       blurCSS.backgroundSize = `${imgWidth}px auto`;
-      // blurCSS.backgroundPosition = posLeft + "px" + " " + posTop + "px";
+      blurCSS.backgroundPosition = posLeft + "px" + " " + posBottom + "px";
+      // console.log(posBottom);
+
+      // blurCSS.backgroundPosition = "10px";
     }
   };
 })();

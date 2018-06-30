@@ -6,9 +6,7 @@ const info = {
     work: Object
   },
   methods: {
-    callback(e) {
-      console.log(e);
-    },
+    callback(e) {},
     enterHandler(el, done) {
       const sentence = el.innerText.trim();
       const wrapped = sentence

@@ -13,7 +13,7 @@
         display: inline-block;
         width: 140px;
         height: 140px;
-        margin-bottom: 16px;
+        margin-bottom: 10px;
         text-align: center;
     }
 
@@ -79,7 +79,7 @@
 }
 
 .user-wrap--flipped {
-    .user {
+    .user-card {
         transform: rotateY(180deg);
     }
 
@@ -88,8 +88,15 @@
     }
 }
 
+.user-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+}
 
-.user,
+.user-card,
 .login {
     position: absolute;
     top: 0;

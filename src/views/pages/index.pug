@@ -27,7 +27,7 @@ block content
   .main-content
     button(href="#").login-btn.auth-btn Авторизоваться
     .user-wrap
-      .user
+      .user-card
         .user__img
           +image("avatar.jpg", "Малафеев Евгений", "user__img-pic")
         .user__desc.user__decs--black
@@ -60,7 +60,6 @@ block content
           fieldset.login__robot-check
               legend Вы точно не робот?
               .checkbox-cnt
-                .checkbox-wrap
                   input(type="radio" name="robot-checkbox" id="robot-yes").login__checkbox-robot.visually-hidden
                   label(for="robot-yes").login__label-checkbox-robot Да
                   input(type="radio" name="robot-checkbox" id="robot-no").login__checkbox-robot.visually-hidden
