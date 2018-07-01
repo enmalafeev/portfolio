@@ -13,6 +13,12 @@
   background: url('assets/images/about_header-works.png') no-repeat center;
 
   @include tablets {
-    width: 90%;
+    width: 100%;
+    padding: 0 30px;
+    background: url('assets/images/about_header768.png') no-repeat center;
+  }
+
+  @include phones {
+    background: url('assets/images/about_header320.png') no-repeat center;
   }
 }

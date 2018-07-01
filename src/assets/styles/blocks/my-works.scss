@@ -2,7 +2,7 @@
 
     &__title {
         display: flex;
-        background: url('assets/images/works_header.svg') no-repeat center;
+        background: url('assets/images/works_header.svg') no-repeat center / contain;
         background-color: #faf8f0;
     }
 }

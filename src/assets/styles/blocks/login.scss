@@ -57,11 +57,16 @@ form {
 .checkbox-cnt {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     margin-bottom: 20px;
 }
 
-
+.checkbox-wrap {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
 
 .input__img {
     display: flex;
@@ -94,6 +99,7 @@ form {
 
 .login__label-checkbox-human {
     position: relative;
+    padding-left: 30px;
     &::before {
         position: absolute;
         content: "";
@@ -105,7 +111,7 @@ form {
         border-radius: 3px;
 
         top: 0;
-        left: -30px;
+        left: 0;
     }
 }
 
@@ -117,13 +123,14 @@ form {
     background-color: $green;
     background: url("assets/images/check.svg") no-repeat center;
     top: 0;
-    left: -30px;
+    left: 0px;
 }
 
 .login__label-checkbox-robot {
-    margin-right: 40px;
+    // margin-right: 40px;
 
     position: relative;
+    padding-left: 30px;
 
     &::before {
         position: absolute;
@@ -137,7 +144,7 @@ form {
         background-color: #fff;
 
         top: 0;
-        left: -30px;
+        left: 0;
     }
 
     &::after {
@@ -161,7 +168,7 @@ form {
     border-radius: 50%;
     background-color: #fff;
     top: 0;
-    left: -30px;
+    left: 0;
 }
 
 .login__checkbox-robot:checked + label::after {
@@ -172,5 +179,5 @@ form {
     background-color: $green;
 
     top: 7px;
-    left: -23px;
+    left: 7px;
 }

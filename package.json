@@ -55,6 +55,7 @@
     "postcss-scss": "^1.0.5",
     "postcss-svgo": "^2.1.6",
     "prettier": "^1.13.4",
+    "scroll-to-js": "^1.0.5",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "2.5.13",
