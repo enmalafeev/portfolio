@@ -22,6 +22,12 @@
   }
 }
 
+@mixin w1120 {
+  @media screen and (max-width: 1120px) {
+    @content;
+  }
+}
+
 @mixin w390 {
   @media screen and (max-width: 390px) {
     @content;

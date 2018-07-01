@@ -1,9 +1,14 @@
-let scroller = require('scroll-to-js');
+const scrollToElement = require("scroll-to-element");
 
 const btnUp = document.querySelector("#btn-up");
-let elem = document.querySelector(".hero");
+const btnDown = document.querySelector("#btn-down");
 
 btnUp.addEventListener("click", e => {
   e.preventDefault();
-  scroller(document.body, elem.offsetTop, 2000);
+  scrollToElement(".hero");
+});
+
+btnDown.addEventListener("click", e => {
+  e.preventDefault();
+  scrollToElement(".my-works");
 });
