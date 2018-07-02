@@ -38,7 +38,14 @@
 
 .about__left-title {
     display: flex;
-    background: url('assets/images/about_header.png') no-repeat center;
+    background: url('assets/images/about_header1200.png') no-repeat center;
+
+    @include tablets {
+        background: url('assets/images/about_header768.png') no-repeat center;
+    }
+    @include phones {
+        background: url('assets/images/about_header320.png') no-repeat center;
+    }
 }
 
 .about__right-title {
