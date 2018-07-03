@@ -4,11 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-
     @include phones {
         padding-top: 25px;
     }
-
     &__img {
         display: inline-block;
         width: 140px;
@@ -16,41 +14,32 @@
         margin-bottom: 10px;
         text-align: center;
     }
-
     &__img-pic {
         width: 100%;
         height: auto;
         border-radius: 50%;
     }
-
     &__desc {
         color: #fff;
         margin-bottom: 40px;
-
         @include phones {
             margin-bottom: 20px;
         }
     }
-
     &__name {
         font-size: 35px;
         font-weight: 500;
         text-align: center;
-
         @include tablets {
             font-size: 28px;
         }
-
         @include phones {
             font-size: 1.375rem;
         }
-
     }
-
     &__info {
         font-weight: 300;
         text-align: center;
-
         @include phones {
             font-size: 0.875rem;
         }
@@ -59,20 +48,17 @@
 
 .user-wrap {
     width: 380px;
-    height: 410px;
+    height: 415px;
     min-height: 350px;
     align-self: center;
-
     position: relative;
     transform-style: preserve-3d;
     perspective: 1000px;
-
     @include tablets {
         width: 350px;
         min-width: 300px;
         height: 395px;
     }
-
     @include phones {
         width: 300px;
         height: 330px;
@@ -85,7 +71,6 @@
     .user-card {
         transform: rotateY(180deg);
     }
-
     .login {
         transform: rotateY(360deg);
     }
@@ -112,23 +97,18 @@
     left: 0;
     width: 100%;
     height: 100%;
-
     background-color: #fff;
     opacity: 0.85;
     border-radius: 5px;
-
     transition: 1s;
     backface-visibility: hidden;
-
     overflow: hidden;
 }
 
 .user__wrap-links {
     width: 40%;
     margin: 0 auto;
-
     margin-bottom: 40px;
-
     @include phones {
         width: 50%;
         margin-bottom: 20px;
@@ -139,21 +119,16 @@
     color: #000;
 }
 
-
 .user-desc__image {
     width: 75%;
     height: auto;
-
     margin: 0 auto;
-
     @include tablets {
         width: 60%;
     }
-
     @include small-phones {
         width: 100%;
     }
-
 }
 
 .user-desc__data {
@@ -171,17 +146,10 @@
 .user-desc__text {
     width: 75%;
     margin-bottom: 30px;
-
     @include tablets {
         width: 60%;
     }
-
     @include small-phones {
         width: 90%;
     }
 }
-
-
-
-
-

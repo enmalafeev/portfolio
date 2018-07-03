@@ -1,37 +1,30 @@
 .login {
     transform: rotateY(180deg);
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     &__title {
         width: 80%;
         align-self: center;
     }
-
     &__form {
         display: flex;
         flex-direction: column;
     }
-
     &__input {
         width: 100%;
         height: 45px;
         background-color: #fff;
         opacity: 1;
         border-radius: 0 5px 5px 0;
-
         padding-left: 20px;
         outline: none;
-
         &:focus,
         &:active {
             outline: 2px solid $green;
             box-shadow: 0 0 4px $green;
         }
     }
-
 }
 
 form {
@@ -58,7 +51,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-
     margin-bottom: 20px;
 }
 
@@ -74,7 +66,6 @@ form {
     align-items: center;
     width: 45px;
     height: 45px;
-
     background-color: #f0efe9;
     border-radius: 5px 0 0 5px;
 }
@@ -89,7 +80,9 @@ form {
     border: none;
     margin: 0;
     padding: 0;
+    text-align: center;
     legend {
+        width: 100%;
         font-weight: 700;
         color: $grey;
         text-align: center;
@@ -103,22 +96,18 @@ form {
     &::before {
         position: absolute;
         content: "";
-
         width: 20px;
         height: 20px;
-
         background-color: $green;
         border-radius: 3px;
-
         top: 0;
         left: 0;
     }
 }
 
-.login__checkbox-human:checked + label::before {
+.login__checkbox-human:checked+label::before {
     width: 20px;
     height: 20px;
-
     border-radius: 3px;
     background-color: $green;
     background: url("assets/images/check.svg") no-repeat center;
@@ -128,25 +117,19 @@ form {
 
 .login__label-checkbox-robot {
     // margin-right: 40px;
-
     position: relative;
     padding-left: 30px;
-
     &::before {
         position: absolute;
         content: "";
-
         width: 20px;
         height: 20px;
-
         border: 1px solid #c4cbcd;
         border-radius: 50%;
         background-color: #fff;
-
         top: 0;
         left: 0;
     }
-
     &::after {
         position: absolute;
         content: "";
@@ -155,11 +138,11 @@ form {
     }
 }
 
-.login__checkbox-robot:checked + label {
+.login__checkbox-robot:checked+label {
     color: $green;
 }
 
-.login__checkbox-robot:checked + label::before {
+.login__checkbox-robot:checked+label::before {
     position: absolute;
     content: "";
     width: 20px;
@@ -171,13 +154,11 @@ form {
     left: 0;
 }
 
-.login__checkbox-robot:checked + label::after {
+.login__checkbox-robot:checked+label::after {
     width: 8px;
     height: 8px;
-
     border-radius: 50%;
     background-color: $green;
-
     top: 7px;
     left: 7px;
 }
