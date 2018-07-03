@@ -4,27 +4,20 @@
     height: 100vh;
     min-height: 650px;
     background: url('assets/images/bg1800.jpg') no-repeat center / cover;
-
-
     &__links {
         position: absolute;
         width: 140px;
-
         top: 35px;
         left: 30px;
-
         @include small-phones {
             width: 125px;
         }
-
     }
-
     &__menu {
         position: absolute;
         top: 27px;
         right: 30px;
     }
-
     &__title {
         width: 100%;
         position: absolute;
@@ -32,23 +25,17 @@
         transform: translateY(-50%);
         z-index: 5;
     }
-
     &__user {
         width: 100%;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
-
     }
-
     &__arrow-scroll {
         position: absolute;
         left: calc(100vw / 2 - 13px);
         bottom: 70px;
-
         z-index: 10;
     }
 }
-
-
