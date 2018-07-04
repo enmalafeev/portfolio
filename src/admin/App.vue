@@ -1,30 +1,15 @@
 <template lang="pug">
-  div#app
-    header.header
-      h1.header__title
-      a(href="index.html") Вернуться на сайт
-    nav.tab-menu
-      a(v-for="tab in 4" :value="tab" href="#") {{tab}}
-    main.content
-      h2.page-title Страница обо мне
-      div.skills
-        div(v-for="skill in 4" :value="skill").skill
-          p.skill__title
-          label.skill__name
-            input(type="number").skill__input
-          span.skill__procent %
-      button.btn Сохранить
-
-
-
+  .container
+    admin
 </template>
 
 <script>
-import inner from "./components/inner";
+import admin from "./components/admin";
+
 export default {
+  name: "App",
   components: {
-    appTitle: require("./components/title").default,
-    inner
+    admin
   },
   methods: {
     handleClick(e) {
@@ -33,19 +18,30 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
-.title {
-  border-bottom: 1px solid #000;
-  color: green;
+
+<style lang="scss">
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
 }
 
-.desc {
-  color: blue;
-  font-size: 24px;
+.wrapper {
+  width: 100%;
+  min-height: 100%;
 }
 
-.btn {
-  background-color: $green;
-  color: #fff;
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 </style>
