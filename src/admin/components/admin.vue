@@ -7,7 +7,7 @@
 
     admin-tabs
     main.content
-      h2.page-title Страница  "Обо мне"
+      h2.page-title Страница "Обо мне"
       .skills-wrap
         adminSkills
         adminSkills
@@ -20,12 +20,14 @@
 import adminTabs from "./adminTabs";
 import adminSkills from "./adminSkills";
 // import adminTab2 from "./adminTab2";
+// import adminTab3 from "./adminTab3";
 
 export default {
   components: {
     adminTabs,
     adminSkills
     // adminTab2
+    // adminTab3
   }
 };
 </script>

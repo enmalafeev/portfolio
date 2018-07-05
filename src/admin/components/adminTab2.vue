@@ -3,7 +3,7 @@
     h2.page-title Страница "Блог"
     h3.blog-title Добавить запись
     form.form
-      input(type="text" placeholder=" Название").form__name
+      input(type="text" placeholder="Название").form__name
       input(type="date" placeholder="Дата").form__date
       textarea(placeholder="Сообщение").form__message
     button.btn Добавить
@@ -42,5 +42,14 @@
   font-size: 16px;
 
   margin-bottom: 30px;
+}
+
+.btn {
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: $green;
+  color: #fff;
+  font-size: 16px;
 }
 </style>
