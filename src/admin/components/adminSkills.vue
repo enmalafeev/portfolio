@@ -1,25 +1,25 @@
 <template lang="pug">
   .skills
     h3.skills-title Frontend
-      .skill-row
-        span.skill-name HTML
-        inputPercent
-        span.percent %
-      .skill-row
-        span.skill-name CSS
-        inputPercent
-        span.percent %
-      .skill-row
-        span.skill-name JavaScript
-        inputPercent
-        span.percent %
+    .skill-row
+      span.skill-name HTML
+      adminSkillsInputPercent
+      span.percent %
+    .skill-row
+      span.skill-name CSS
+      adminSkillsInputPercent
+      span.percent %
+    .skill-row
+      span.skill-name JavaScript
+      adminSkillsInputPercent
+      span.percent %
 </template>
 
 <script>
-import inputPercent from "./inputPercent";
+import adminSkillsInputPercent from "./adminSkillsInputPercent";
 export default {
   components: {
-    inputPercent
+    adminSkillsInputPercent
   }
 };
 </script>
@@ -31,6 +31,7 @@ export default {
 }
 
 .skills-title {
+  margin-top: 0;
   font-weight: 600;
 }
 

@@ -9,27 +9,33 @@
     main.content
       h2.page-title Страница  "Обо мне"
       .skills-wrap
-        skills
-        skills
-        skills
+        adminSkills
+        adminSkills
+        adminSkills
 
       button.btn Сохранить
 </template>
 
 <script>
 import adminTabs from "./adminTabs";
-import skills from "./skills";
+import adminSkills from "./adminSkills";
+// import adminTab2 from "./adminTab2";
 
 export default {
   components: {
     adminTabs,
-    skills
+    adminSkills
+    // adminTab2
   }
 };
 </script>
 
 
 <style lang="scss" scoped>
+.admin-panel {
+  position: relative;
+  z-index: 20;
+}
 .header {
   width: 100%;
   height: 80px;
@@ -52,11 +58,19 @@ export default {
     color: #fff;
   }
 }
+
+.page-title {
+  font-size: 21px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
 .skills-wrap {
   width: 480px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .content {

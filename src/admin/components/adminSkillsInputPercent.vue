@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: "InputPercent",
+  name: "AdminSkillsInputPercent",
   data() {
     return {
       percent: 0
@@ -21,5 +21,6 @@ export default {
   font-size: 16px;
   border-radius: 3px;
   text-align: right;
+  border: none;
 }
 </style>
