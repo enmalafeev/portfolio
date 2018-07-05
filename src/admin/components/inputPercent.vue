@@ -13,3 +13,13 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scopped>
+.input-percent {
+  width: 45px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 3px;
+  text-align: right;
+}
+</style>

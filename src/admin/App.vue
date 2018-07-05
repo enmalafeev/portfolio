@@ -24,7 +24,7 @@ body {
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 300;
   margin: 0;
 }
 

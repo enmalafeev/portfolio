@@ -4,24 +4,26 @@
       .header__wrap
         h1.header__title Панель администрирования
         a(href="index.html").header__link Вернуться на сайт
+
+    admin-tabs
     main.content
-      admin-tabs
-      h2.page-title Страница обо мне
-      div.skills
-        div(v-for="skill in 4" :value="skill").skill
-          p.skill__title
-          label.skill__name HTML
-            input(type="number").skill__input
-          span.skill__procent %
+      h2.page-title Страница  "Обо мне"
+      .skills-wrap
+        skills
+        skills
+        skills
+
       button.btn Сохранить
 </template>
 
 <script>
 import adminTabs from "./adminTabs";
+import skills from "./skills";
 
 export default {
   components: {
-    adminTabs
+    adminTabs,
+    skills
   }
 };
 </script>
@@ -50,9 +52,23 @@ export default {
     color: #fff;
   }
 }
+.skills-wrap {
+  width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content {
+  padding-left: 30px;
+}
 
 .btn {
+  width: 120px;
+  height: 45px;
+  border-radius: 5px;
   background-color: $green;
   color: #fff;
+  font-size: 16px;
 }
 </style>
