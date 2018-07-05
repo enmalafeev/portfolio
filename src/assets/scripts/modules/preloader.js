@@ -21,6 +21,6 @@ function imageLoaded() {
       if (!preloader.classList.contains("done")) {
         preloader.classList.add("done");
       }
-    }, 500);
+    }, 700);
   }
 }
