@@ -1,11 +1,11 @@
-const blur = (function () {
+const blur = (function() {
   const wrapper = document.querySelector(".reviews");
   const form = document.querySelector(".blur-form");
   return {
     set: () => {
       // соотношение ширины и высоты бекграунда
       const review = document.querySelector(".reviews");
-      const formWrapper = document.querySelector('.blur-form-wrapper');
+      const formWrapper = document.querySelector(".blur-form-wrapper");
       const topReview = review.offsetTop;
       const heightReview = review.getBoundingClientRect().height;
       const wrapperTop = formWrapper.offsetTop;
@@ -18,6 +18,6 @@ const blur = (function () {
   };
 })();
 blur.set();
-window.onresize = function () {
+window.onresize = function() {
   blur.set();
 };

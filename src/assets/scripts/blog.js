@@ -1,4 +1,4 @@
 import "./modules/swipe-aside";
 import "./modules/popup";
 import "./modules/hamburger";
-import "./modules/preloader";
+import "./modules/blog-scroll";
