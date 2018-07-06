@@ -50,8 +50,8 @@ block content
 
           ul.article__list
             each item, ndx in articles
-              li.article__item
-                h2(id=ndx).article__title= item.title
+              li(id=`article${ndx}`).article__item
+                h2.article__title= item.title
                 span.article__date= item.date
                 p= item.text
 
