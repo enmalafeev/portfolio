@@ -35,5 +35,9 @@
         top: 0;
         right: -20px;
         background-color: $green;
+        transition: 1s;
+    }
+    @include tablets {
+        opacity: 1;
     }
 }

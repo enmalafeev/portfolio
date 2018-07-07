@@ -20,9 +20,8 @@ function addActiveClass() {
   for (const prop in obj) {
     let article = document.getElementById(prop);
     let blogLink = document.getElementById(obj[prop]);
-    let top = article.getBoundingClientRect().top;
-    let bottom = article.getBoundingClientRect().bottom;
-    if (top < 0 && bottom > 0) {
+    let { top, bottom } = article.getBoundingClientRect();
+    if (top < 100 && bottom > 0) {
       blogLink.classList.add("menu-articles__link--active");
     } else {
       blogLink.classList.remove("menu-articles__link--active");
