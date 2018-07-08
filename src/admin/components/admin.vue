@@ -1,10 +1,6 @@
 <template lang="pug">
   .admin-panel
-    header.header
-      .header__wrap
-        h1.header__title Панель администрирования
-        a(href="index.html").header__link Вернуться на сайт
-
+    adminHeader
     admin-tabs
     main.content
       h2.page-title Страница "Обо мне"
@@ -17,6 +13,7 @@
 </template>
 
 <script>
+import adminHeader from "./adminHeader";
 import adminTabs from "./adminTabs";
 import adminSkills from "./adminSkills";
 // import adminTab2 from "./adminTab2";
@@ -24,6 +21,7 @@ import adminSkills from "./adminSkills";
 
 export default {
   components: {
+    adminHeader,
     adminTabs,
     adminSkills
     // adminTab2
@@ -37,28 +35,6 @@ export default {
 .admin-panel {
   position: relative;
   z-index: 20;
-}
-.header {
-  width: 100%;
-  height: 80px;
-  background-color: $green;
-
-  &__wrap {
-    width: auto;
-    padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  &__title {
-    font-family: "Roboto", Helvetica, sans-serif;
-    font-size: 28px;
-    color: #fff;
-  }
-  &__link {
-    font-size: 16px;
-    color: #fff;
-  }
 }
 
 .page-title {

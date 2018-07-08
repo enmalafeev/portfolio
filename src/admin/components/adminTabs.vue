@@ -1,16 +1,22 @@
 <template lang="pug">
   .tabs
     ul.tabs-list
-      li.tabs-item
-        a(href="#").tabs-link.active TAB 1
-      li.tabs-item
-        a(href="#").tabs-link TAB 2
-      li.tabs-item
-        a(href="#").tabs-link TAB 3
-      li.tabs-item
-        a(href="#").tabs-link TAB 4
+      li(v-for="tab in tabs" :key="tabs.id").tabs-item
+        a(href="#").tabs-link {{tab}}
+
 
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      tabs: ["Обо мне", "Блог", "Мои работы"]
+    };
+  }
+};
+</script>
+
 
 <style lang="scss">
 .tabs {
