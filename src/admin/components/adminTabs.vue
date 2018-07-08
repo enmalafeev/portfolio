@@ -1,8 +1,12 @@
 <template lang="pug">
   .tabs
     ul.tabs-list
-      li(v-for="tab in tabs" :key="tabs.id").tabs-item
-        a(href="#").tabs-link {{tab}}
+      li(
+        v-for="tab in tabs"
+        :key="tabs.id").tabs-item
+        router-link(
+          :to="tab.href"
+        ).tabs-link {{tab.title}}
 
 
 </template>
@@ -11,7 +15,11 @@
 export default {
   data() {
     return {
-      tabs: ["Обо мне", "Блог", "Мои работы"]
+      tabs: [
+        { title: "Обо мне", href: "/" },
+        { title: "Работы", href: "/works" },
+        { title: "Блог", href: "/blog" }
+      ]
     };
   }
 };
