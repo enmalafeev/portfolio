@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev:mpa": "cross-env NODE_ENV=development gulp",
-    "dev:spa": "cross-env NODE_ENV=development webpack-dev-server --config webpack.spa.config.js --open --hot",
+    "dev:spa": "cross-env NODE_ENV=development webpack-dev-server --config webpack.spa.config.js --hot",
     "build": " cross-env NODE_ENV=production gulp build; cross-env NODE_ENV=production webpack --config webpack.spa.config.js --progress --hide-modules",
     "reg": "node reg-util.js"
   },
@@ -14,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^8.5.0",
+    "axios": "^0.18.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
@@ -75,6 +76,8 @@
     "request": "^2.87.0",
     "scroll-to-element": "^2.0.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   }
 }
