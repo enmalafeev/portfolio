@@ -7,7 +7,7 @@ import admin from "./components/admin";
 const routes = [
   {
     path: "/",
-    components: "admin"
+    component: admin
   }
 ];
 
