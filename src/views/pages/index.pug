@@ -50,28 +50,7 @@ block content
         +nav('main-menu', [ {title: 'Мои работы', link: 'works.html' }, {title: 'Обо мне', link: 'about.html'}, {title: 'Блог', link: 'blog.html' }])
       .login
         h2.login__title.block-subtitle Авторизуйтесь
-        form(name="login-form" method="post").login__form
-          .input-cnt
-            .input-wrap
-              .input__img
-                +icon("login", "input__img-svg")
-              input(type="text" name="login" placeholder="Логин").login__input
-            .input-wrap
-              .input__img
-                +icon("password", "input__img-svg")
-              input(type="password" name="password" placeholder="Пароль").login__input
-          .checkbox-cnt
-            input(type="checkbox" name="human" id="human").login__checkbox-human.visually-hidden
-            label(for="human").login__label-checkbox-human Я человек
-          fieldset.login__robot-check
-              legend Вы точно не робот?
-              .checkbox-cnt
-                .checkbox-wrap
-                  input(type="radio" name="robot-checkbox" id="robot-yes").login__checkbox-robot.visually-hidden
-                  label(for="robot-yes").login__label-checkbox-robot Да
-                  input(type="radio" name="robot-checkbox" id="robot-no").login__checkbox-robot.visually-hidden
-                  label(for="robot-no").login__label-checkbox-robot Не уверен
-        +nav('main-menu', [ {title: 'На главную', link: 'index.html' }, {title: 'Войти', link: 'index.html'} ])
+        #auth-component
 
     footer.main-footer
       p &#169 Евгений Малафеев | Создано с любовью в LoftSchool 2018

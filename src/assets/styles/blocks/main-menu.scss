@@ -1,26 +1,23 @@
 .main-menu {
     background-color: $green;
     width: 100%;
-
-
     &__list {
         display: flex;
         align-items: center;
     }
-
     &__item {
         height: 45px;
         line-height: 45px;
+        border: none;
         flex: 1 1 auto;
     }
-
     &__link {
         display: block;
         text-align: center;
         width: 100%;
         text-decoration: none;
         color: #fff;
-
+        background-color: transparent;
         &:hover,
         &:active {
             background-color: $green-dark;
@@ -32,4 +29,3 @@
 .main-menu__item:not(:last-child) {
     border-right: 1px solid #ccc;
 }
-
