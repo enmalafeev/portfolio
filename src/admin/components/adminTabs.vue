@@ -1,5 +1,5 @@
 <template lang="pug">
-  .tabs
+  #tabs
     ul.tabs-list
       li(
         v-for="tab in tabs"
@@ -27,7 +27,7 @@ export default {
 
 
 <style lang="scss">
-.tabs {
+#tabs {
   width: 100%;
   background-color: $light-grey;
 }

@@ -3,21 +3,36 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 import admin from "./components/admin";
+import adminHeader from "./components/adminHeader";
+import adminTabs from "./components/adminTabs";
 import adminTab2 from "./components/adminTab2";
 import adminTab3 from "./components/adminTab3";
+import adminSkills from "./components/adminSkills";
 
 const routes = [
   {
     path: "/",
-    component: admin
+    components: {
+      default: adminSkills,
+      header: adminHeader,
+      tabs: adminTabs
+    }
   },
   {
     path: "/blog",
-    component: adminTab2
+    components: {
+      default: adminTab2,
+      header: adminHeader,
+      tabs: adminTabs
+    }
   },
   {
     path: "/works",
-    component: adminTab3
+    components: {
+      default: adminTab3,
+      header: adminHeader,
+      tabs: adminTabs
+    }
   }
 ];
 

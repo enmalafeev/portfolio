@@ -1,8 +1,8 @@
 <template lang="pug">
-  header.header
-      .header__wrap
-        h1.header__title Панель администрирования
-        a(href="index.html").header__link Вернуться на сайт
+  .header
+    .header__wrap
+      h1.header__title Панель администрирования
+      a(href="index.html").header__link Вернуться на сайт
 </template>
 
 <style lang="scss" scoped>

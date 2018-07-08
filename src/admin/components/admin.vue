@@ -1,15 +1,12 @@
 <template lang="pug">
   .admin-panel
-    adminHeader
-    admin-tabs
+    .header
+      router-view(name="header")
+    .tabs
+      router-view(name="tabs")
     main.content
-      h2.page-title Страница "Обо мне"
-      .skills-wrap
-        adminSkills
-        adminSkills
-        adminSkills
+      router-view
 
-      button.btn Сохранить
 </template>
 
 <script>
@@ -43,24 +40,7 @@ export default {
   margin-bottom: 48px;
 }
 
-.skills-wrap {
-  width: 480px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-
 .content {
   padding-left: 30px;
-}
-
-.btn {
-  width: 120px;
-  height: 45px;
-  border-radius: 5px;
-  background-color: $green;
-  color: #fff;
-  font-size: 16px;
 }
 </style>
