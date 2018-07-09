@@ -13,8 +13,6 @@
 import adminHeader from "./adminHeader";
 import adminTabs from "./adminTabs";
 import adminSkills from "./adminSkills";
-// import adminTab2 from "./adminTab2";
-// import adminTab3 from "./adminTab3";
 
 const data = [
   { id: 1, title: "HTML", percent: 20, category: 0 },
@@ -31,8 +29,6 @@ export default {
     adminHeader,
     adminTabs,
     adminSkills
-    // adminTab2
-    // adminTab3
   }
 };
 </script>

@@ -7,21 +7,6 @@
       :type="type"
       :skills="skills"
     )
-    // h3.skills-title Frontend
-    // .skills-wrap
-    //   .skill-row
-    //     span.skill-name HTML
-    //     adminSkillsInputPercent
-    //     span.percent %
-    //   .skill-row
-    //     span.skill-name CSS
-    //     adminSkillsInputPercent
-    //     span.percent %
-    //   .skill-row
-    //     span.skill-name JavaScript
-    //     adminSkillsInputPercent
-    //     span.percent %
-    // button.btn Сохранить
 </template>
 
 <script>
