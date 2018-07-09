@@ -6,8 +6,8 @@ new Vue({
   data() {
     return {
       user: {
-        name: "04062018-admin",
-        password: "323232"
+        name: "",
+        password: ""
       }
     };
   },

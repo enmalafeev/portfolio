@@ -2,7 +2,6 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
-import admin from "./components/admin";
 import adminHeader from "./components/adminHeader";
 import adminTabs from "./components/adminTabs";
 import adminTab2 from "./components/adminTab2";

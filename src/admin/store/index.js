@@ -3,9 +3,10 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import skills from "./modules/skills";
+
 export const store = new Vuex.Store({
-  state: {},
-  actions: {},
-  getters: {},
-  mutations: {}
+  modules: {
+    skills
+  }
 });

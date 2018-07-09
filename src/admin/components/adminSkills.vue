@@ -1,28 +1,56 @@
 <template lang="pug">
   .skills
     h2.page-title Страница "Обо мне"
-    h3.skills-title Frontend
-    .skills-wrap
-      .skill-row
-        span.skill-name HTML
-        adminSkillsInputPercent
-        span.percent %
-      .skill-row
-        span.skill-name CSS
-        adminSkillsInputPercent
-        span.percent %
-      .skill-row
-        span.skill-name JavaScript
-        adminSkillsInputPercent
-        span.percent %
-    button.btn Сохранить
+    adminSkillsRow(
+      v-for="type in types"
+      :key="type.name"
+      :type="type"
+      :skills="skills"
+    )
+    // h3.skills-title Frontend
+    // .skills-wrap
+    //   .skill-row
+    //     span.skill-name HTML
+    //     adminSkillsInputPercent
+    //     span.percent %
+    //   .skill-row
+    //     span.skill-name CSS
+    //     adminSkillsInputPercent
+    //     span.percent %
+    //   .skill-row
+    //     span.skill-name JavaScript
+    //     adminSkillsInputPercent
+    //     span.percent %
+    // button.btn Сохранить
 </template>
 
 <script>
-import adminSkillsInputPercent from "./adminSkillsInputPercent";
+import adminSkillsRow from "./adminSkillsRow";
+import { mapActions, mapState } from "vuex";
+
 export default {
   components: {
-    adminSkillsInputPercent
+    adminSkillsRow
+  },
+  data() {
+    return {
+      types: [
+        { id: 0, name: "Frontend" },
+        { id: 1, name: "Backend" },
+        { id: 2, name: "Workflow" }
+      ]
+    };
+  },
+  computed: {
+    ...mapState({
+      skills: state => state.skills.data
+    })
+  },
+  created() {
+    this.fetchSkills();
+  },
+  methods: {
+    ...mapActions(["fetchSkills"])
   }
 };
 </script>
