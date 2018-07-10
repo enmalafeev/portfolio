@@ -12,10 +12,12 @@ const moveLayers = e => {
     const positionY = initialY * divider;
 
     const bottomPosition = (window.innerHeight / 2) * divider;
+    const leftPosition = (window.innerWidth / 2) * divider;
 
     const image = layer.firstElementChild;
 
     image.style.bottom = `-${bottomPosition}px`;
+    image.style.left = `-${leftPosition}px`;
 
     layer.style.transform = `translate3d(${positionX}px, ${positionY}px, 0)`;
   });
