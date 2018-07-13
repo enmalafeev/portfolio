@@ -5,8 +5,8 @@ import axios from "axios";
 Vue.use(VueRouter);
 import adminHeader from "./components/adminHeader";
 import adminTabs from "./components/adminTabs";
-import adminTab2 from "./components/adminTab2";
-import adminTab3 from "./components/adminTab3";
+import adminBlog from "./components/adminBlog";
+import adminWorks from "./components/adminWorks";
 import adminSkills from "./components/adminSkills";
 
 const routes = [
@@ -21,7 +21,7 @@ const routes = [
   {
     path: "/blog",
     components: {
-      default: adminTab2,
+      default: adminBlog,
       header: adminHeader,
       tabs: adminTabs
     }
@@ -29,7 +29,7 @@ const routes = [
   {
     path: "/works",
     components: {
-      default: adminTab3,
+      default: adminWorks,
       header: adminHeader,
       tabs: adminTabs
     }

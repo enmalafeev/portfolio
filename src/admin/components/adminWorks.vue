@@ -8,7 +8,7 @@
       label.file-upload
         span.btn-upload Загрузить картинку
         input(type="file" @change="addPhoto").upload-input
-    button(@click="addWork").btn Добавить
+    button(@click="addWorks").btn Добавить
 </template>
 
 <script>
