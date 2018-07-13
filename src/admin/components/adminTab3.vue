@@ -3,13 +3,46 @@
     h2.page-title Страница "Мои работы"
     h3.blog-title Добавить работу
     form.form
-      input(type="text" placeholder="Название проекта").form__name
-      input(type="text" placeholder="Технологии").form__date
+      input(type="text" placeholder="Название проекта" v-model="work.title").form__name
+      input(type="text" placeholder="Технологии" v-model="work.techs").form__date
       label.file-upload
         span.btn-upload Загрузить картинку
-        input(type="file").upload-input
-    button.btn Добавить
+        input(type="file" @change="addPhoto").upload-input
+    button(@click="addWork").btn Добавить
 </template>
+
+<script>
+import { mapActions } from "vuex";
+export default {
+  data() {
+    return {
+      work: {
+        title: "",
+        techs: "",
+        link: "",
+        photo: ""
+      }
+    };
+  },
+  methods: {
+    ...mapActions(["addNewWork"]),
+    addPhoto(e) {
+      const files = e.target.files;
+      if (files.length === 0) return;
+      this.work.photo = files[0];
+    },
+    addWorks() {
+      const formData = new FormData();
+      Object.keys(this.work).forEach(prop => {
+        formData.append(prop, this.work[prop]);
+      });
+
+      this.addNewWork(formData);
+    }
+  }
+};
+</script>
+
 
 <style lang="scss" scoped>
 .form {

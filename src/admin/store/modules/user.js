@@ -22,7 +22,7 @@ const user = {
             commit("fillUpUserData", response.data.user);
           },
           error => {
-            console.log("usererrororr");
+            console.log("usererror");
           }
         )
         .catch(e => console.error(e));

@@ -1,5 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import axios from "axios";
 
 Vue.use(VueRouter);
 import adminHeader from "./components/adminHeader";
@@ -35,7 +36,29 @@ const routes = [
   }
 ];
 
-export default new VueRouter({
+const router = new VueRouter({
   routes,
   mode: "history"
 });
+
+const guard = axios.create({
+  baseURL: "http://webdev-api.loftschool.com/"
+});
+
+// router.beforeEach((to, from, next) => {
+//   guard
+//     .get("/user", {
+//       headers: {
+//         Autorization: `Bearer ${localStorage.getItem("token")}`
+//       }
+//     })
+//     .then(response => {
+//       next();
+//     })
+//     .catch(error => {
+//       localStorage.removeItem("token");
+//       window.location.href = "/";
+//     });
+// });
+
+export default router;
