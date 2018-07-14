@@ -5,7 +5,8 @@ new Vue({
   data: {
     errors: [],
     name: null,
-    email: null
+    email: null,
+    message: null
   },
   methods: {
     checkForm(e) {
@@ -21,6 +22,9 @@ new Vue({
       }
       if (!this.errors.length) return true;
       e.preventDefault();
+    },
+    clearAll: function() {
+      (this.name = ""), (this.email = ""), (this.message = "");
     }
   },
   validEmail: function(email) {
