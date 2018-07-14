@@ -1,5 +1,4 @@
 <template lang="pug">
-  .container
     admin
 </template>
 
