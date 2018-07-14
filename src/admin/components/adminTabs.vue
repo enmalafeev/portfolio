@@ -17,8 +17,8 @@ export default {
     return {
       tabs: [
         { title: "Обо мне", href: "/portfolio/dist/admin" },
-        { title: "Работы", href: "/portfolio/dist/works" },
-        { title: "Блог", href: "/portfolio/dist/blog" }
+        { title: "Работы", href: "/portfolio/dist/admin/works" },
+        { title: "Блог", href: "/portfolio/dist/admin/blog" }
       ]
     };
   }
