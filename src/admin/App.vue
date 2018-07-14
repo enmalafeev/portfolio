@@ -1,11 +1,11 @@
 <template lang="pug">
-    #root
-      .header
-        router-view(name="header")
-      .tabs
-        router-view(name="tabs")
-      main.content
-        router-view
+  #root
+    .header
+      router-view(name="header")
+    .tabs
+      router-view(name="tabs")
+    main.content
+      router-view
 </template>
 
 <script>
@@ -37,14 +37,33 @@ body,
 html {
   margin: 0;
   height: 100%;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
 }
 .wrapper {
   height: 100%;
+  background: url("./img/bg1200.jpg") no-repeat center / cover;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
 }
 #root {
   height: 100%;
   display: flex;
   flex-flow: column;
+  position: relative;
+  z-index: 100;
 }
 .header {
   height: 80px;

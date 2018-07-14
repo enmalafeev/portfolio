@@ -42,10 +42,6 @@ export default {
 
 
 <style lang="scss" scoped>
-.skills {
-  width: 200px;
-}
-
 .skills-title {
   margin-top: 0;
   font-weight: 600;
