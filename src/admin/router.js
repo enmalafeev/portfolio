@@ -19,7 +19,7 @@ const routes = [
     }
   },
   {
-    path: "/portfolio/dist/blog",
+    path: "/portfolio/dist/admin/blog",
     components: {
       default: adminBlog,
       header: adminHeader,
@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: "/portfolio/dist/works",
+    path: "/portfolio/dist/admin/works",
     components: {
       default: adminWorks,
       header: adminHeader,
