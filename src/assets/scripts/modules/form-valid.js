@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 new Vue({
-  el: "#form",
+  el: "#form-valid",
   data: {
     errors: [],
     name: null,
@@ -26,5 +26,6 @@ new Vue({
   validEmail: function(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
-  }
+  },
+  template: "#form"
 });

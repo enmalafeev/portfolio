@@ -1,0 +1,12 @@
+script(type="text/x-tamplate")#form
+  form(action="post"  @submit="checkForm" novalidate="true").contact-me__form
+    p(v-if="errors.length")
+      b Пожалуйста исправьте указанные ошибки
+      ul
+        li(v-for="error in errors") {{ error }}
+    input.contact-me__name(type="text", name="name" placeholder="Имя" v-model="name")
+    input.contact-me__email(type="email" name="email" placeholder="Email" v-model="email")
+    textarea.contact-me__message(name="message", placeholder="Ваше сообщение")
+    .form-btn-wrap
+      button.btn-form.btn-send(type="submit") Отправить
+      button.btn-form.btn-clear(type="button") Очистить
