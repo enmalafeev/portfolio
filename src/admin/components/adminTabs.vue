@@ -16,9 +16,9 @@ export default {
   data() {
     return {
       tabs: [
-        { title: "Обо мне", href: "/" },
-        { title: "Работы", href: "/works" },
-        { title: "Блог", href: "/blog" }
+        { title: "Обо мне", href: "/portfolio/dist/admin" },
+        { title: "Работы", href: "/portfolio/dist/works" },
+        { title: "Блог", href: "/portfolio/dist/blog" }
       ]
     };
   }
