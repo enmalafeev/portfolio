@@ -1,8 +1,16 @@
 import Vue from "vue";
 
+Vue.component("modal", {
+  template: "#modal"
+});
+
 new Vue({
   el: "#form-valid",
+  components: {
+    modal
+  },
   data: {
+    showModal: false,
     errors: [],
     name: null,
     email: null,

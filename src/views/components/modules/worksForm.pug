@@ -1,12 +1,25 @@
+script(type="text/x-tamplate")#modal
+  transition(name="modal-fade")
+    .modal-backdrop
+      .modal
+        header.modal-header
+          slot(name="header") I am header!
+            button(
+            type="button"
+            class="btn-close"
+            @click="close"
+          ) x
+        .modal-body
+          slot(name="body") I am default body !
+
 script(type="text/x-tamplate")#form
   form(action="post"  @submit="checkForm" novalidate="true").contact-me__form
-    p(v-if="errors.length")
-      b Пожалуйста исправьте указанные ошибки
-      ul
-        li(v-for="error in errors") {{ error }}
+    #modal(v-if="showModal")
     input.contact-me__name(type="text", name="name" placeholder="Имя" v-model="name")
     input.contact-me__email(type="email" name="email" placeholder="Email" v-model="email")
     textarea.contact-me__message(name="message", placeholder="Ваше сообщение" v-model="message")
     .form-btn-wrap
-      button.btn-form.btn-send(type="submit") Отправить
+      button.btn-form.btn-send(type="submit" @click="showModal=true") Отправить
       button.btn-form.btn-clear(type="button" @click.prevent="clearAll") Очистить
+
+

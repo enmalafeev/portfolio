@@ -1,0 +1,15 @@
+script(type="text/x-tamplate")#modal
+  transition(name="modal-fade")
+    .modal-backdrop
+      .modal
+        header.modal-header
+          slot(name="header") I am header!
+            button(
+            type="button"
+            class="btn-close"
+            @click="close"
+          ) x
+        .modal-body
+          slot(name="body") I am default body !
+
+
