@@ -5,7 +5,7 @@ block variables
 
 block scripts
   script(src='about.bundle.js')
-
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZwMCDPLdKUm9wCOhHiCyoOtsd2j3FiXU&callback=initMap")
 block content
   include ../common/hero.pug
 
@@ -36,27 +36,25 @@ block content
           #skills-container
 
   section.map
-    //- .google-map
-      //- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43325.75104347665!2d30.19668377852085!3d60.00080322907122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469635c9a22b0ccd%3A0xbacf2198e57a2e54!2z0L_RgC4g0JDQstC40LDQutC-0L3RgdGC0YDRg9C60YLQvtGA0L7QsiwgMjDQujEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTczNzM!5e0!3m2!1sru!2sru!4v1528651913435" width="1800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-      +image("map.jpg", "map", "map__img")
-    .map__data
-      .contacts
-        h2.contacts__title.block-subtitle Контакты
-        address.contacts__data
-          ul.contacts__list
-            -
-              var contacts = [
-                ['skype', 'evgeny_malafeev', 'skype:evgeny_malafeev'],
-                ['envelope', 'malafeev.en@yandex.ru', 'mailto:malafeev.en@yandex.ru'],
-                ['phone', '+7 911 924 87 98', 'tel:+79119248798'],
-                ['map_marker', 'г.Санкт-Петербург пр.Авиаконструкторов д.20', 'https://www.google.ru/maps/place/%D0%BF%D1%80.+%D0%90%D0%B2%D0%B8%D0%B0%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2,+20,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197373/@60.0197727,30.2317455,17z/data=!3m1!4b1!4m5!3m4!1s0x469635c9a2c940dd:0xa71a19beef811b0c!8m2!3d60.0197727!4d30.2339342']
-              ]
-            each item in contacts
-              li.contacts__item.contacts-row
-                .contacts-row.contacts__icon
-                  a(href=`${item[2]}`).contacts__link
-                    +icon(`${item[0]}`, 'contacts__icon-img')
-                    .contacts-row.contacts__title #{item[1]}
+    #google-map
+      .map__data
+        .contacts
+          h2.contacts__title.block-subtitle Контакты
+          address.contacts__data
+            ul.contacts__list
+              -
+                var contacts = [
+                  ['skype', 'evgeny_malafeev', 'skype:evgeny_malafeev'],
+                  ['envelope', 'malafeev.en@yandex.ru', 'mailto:malafeev.en@yandex.ru'],
+                  ['phone', '+7 911 924 87 98', 'tel:+79119248798'],
+                  ['map_marker', 'г.Санкт-Петербург пр.Авиаконструкторов д.20', 'https://www.google.ru/maps/place/%D0%BF%D1%80.+%D0%90%D0%B2%D0%B8%D0%B0%D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80%D0%BE%D0%B2,+20,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+197373/@60.0197727,30.2317455,17z/data=!3m1!4b1!4m5!3m4!1s0x469635c9a2c940dd:0xa71a19beef811b0c!8m2!3d60.0197727!4d30.2339342']
+                ]
+              each item in contacts
+                li.contacts__item.contacts-row
+                  .contacts-row.contacts__icon
+                    a(href=`${item[2]}`).contacts__link
+                      +icon(`${item[0]}`, 'contacts__icon-img')
+                      .contacts-row.contacts__title #{item[1]}
 
 
 
