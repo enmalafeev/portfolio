@@ -6,10 +6,8 @@ window.initMap = function() {
       lat: 59.974627,
       lng: 30.221203
     },
-    zoom: 12
-  });
-  var styledMapType = new google.maps.StyledMapType(
-    [
+    zoom: 12,
+    styles: [
       {
         elementType: "geometry",
         stylers: [
@@ -276,12 +274,6 @@ window.initMap = function() {
           }
         ]
       }
-    ],
-    {
-      name: "Styled Map"
-    }
-  );
+    ]
+  });
 };
-
-map.mapTypes.set("styled_map", styledMapType);
-map.setMapTypeId("styled_map");
