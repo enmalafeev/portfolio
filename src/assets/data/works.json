@@ -1,29 +1,23 @@
-[{
+[
+  {
     "id": 1,
-    "title": "1 Сайт школы онлайн образования",
-    "skills": "1 Html, Css, JavaScript",
-    "photo": "assets/images/content/slider/work-1.png",
-    "link": "//google.com"
+    "title": "Интернет магазин гаджетов Device",
+    "skills": "Html, Css, JavaScript",
+    "photo": "assets/images/content/slider/device.png",
+    "link": "https://enmalafeev.github.io/81962-device/"
   },
   {
     "id": 2,
-    "title": "2 Сайт школы онлайн образования",
-    "skills": "2 Html, Css, JavaScript",
-    "photo": "assets/images/content/slider/work-2.png",
-    "link": "//yandex.ru"
+    "title": "Личный сайт-портфолио",
+    "skills": "Webpack, Gulp, Yarn, Npm, Pug, Git, Css Grid, JavaScript, Vue.js",
+    "photo": "assets/images/content/slider/portfolio.jpg",
+    "link": "https://enmalafeev.github.io/portfolio/dist/"
   },
   {
     "id": 3,
-    "title": "3 Сайт школы онлайн образования",
-    "skills": "3 Html, Css, JavaScript",
-    "photo": "assets/images/content/slider/work-3.png",
-    "link": "//rambler.ru"
-  },
-  {
-    "id": 4,
-    "title": "4 Сайт школы онлайн образования",
-    "skills": "4 Html, Css, JavaScript",
-    "photo": "assets/images/content/slider/work-4.png",
-    "link": "//vk.com"
+    "title": "Консольная игра Brain-games",
+    "skills": "Node.js, JS ES-6, Babel, Npm, Travis",
+    "photo": "assets/images/content/slider/brain-games.png",
+    "link": "https://github.com/enmalafeev/brainz-gamez"
   }
 ]
