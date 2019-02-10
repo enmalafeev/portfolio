@@ -19,9 +19,9 @@
   width: 110%;
   height: 100%;
   transform: translateZ(0);
-  @include tablets {
-    display: none;
-  }
+  // @include tablets {
+  //   display: none;
+  // }
 }
 
 .parallax__img {
