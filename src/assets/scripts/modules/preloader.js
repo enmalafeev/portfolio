@@ -4,6 +4,17 @@ let imagesLoadedCount = 0;
 let preloader = document.querySelector(".preloader");
 let percDisplay = document.getElementById("perc_load");
 
+document.onload = () => {
+  setTimeout(() => {
+    if (!preloader.classList.contains("done")) {
+      preloader.classList.add("done");
+    }
+  }, 700);
+};
+
+if (window.innerWidth <= 768) {
+}
+
 for (let i = 0; i < imagesTotalCount; i++) {
   let imageClone = new Image();
   imageClone.onload = imageLoaded;
