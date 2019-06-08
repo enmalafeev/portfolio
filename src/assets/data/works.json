@@ -19,5 +19,12 @@
     "skills": "Node.js, JS ES-6, Babel, Npm, Travis",
     "photo": "assets/images/content/slider/brain-games.png",
     "link": "https://github.com/enmalafeev/brainz-gamez"
+  },
+  {
+    "id": 4,
+    "title": "Консольная приложение Genn-diff",
+    "skills": "Node.js, JS ES-6, Babel, Npm, Travis, Jest",
+    "photo": "assets/images/content/slider/genndiff.png",
+    "link": "https://github.com/enmalafeev/genn-diff"
   }
 ]
