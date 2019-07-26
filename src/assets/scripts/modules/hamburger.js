@@ -7,7 +7,4 @@ const menu = document.querySelector(".hamburger");
 
 menu.addEventListener("click", e => {
   stripArr.forEach(strip => strip.classList.toggle("open"));
-  // strip1.classList.toggle("open");
-  // strip2.classList.toggle("open");
-  // strip3.classList.toggle("open");
 });
