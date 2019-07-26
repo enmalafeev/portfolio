@@ -14,7 +14,7 @@ new Vue({
   methods: {
     login() {
       axios
-        .post("http://webdev-api.loftschool.com/login", this.user)
+        .post("https://webdev-api.loftschool.com/login", this.user)
         .then(rsp => {
           if (rsp.status === 200) {
             const ttl = Math.floor(Date.now() / 1000 + rsp.data.ttl);
