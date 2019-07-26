@@ -45,7 +45,7 @@ export default {
     ...mapActions(["addNewSkill"]),
     addSkill() {
       this.addNewSkill(this.newSkill).then(e => {
-        this.newSkill.titile = "";
+        this.newSkill.title = "";
         this.newSkill.percents = "";
       });
     }

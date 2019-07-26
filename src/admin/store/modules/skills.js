@@ -22,7 +22,7 @@ const skills = {
     },
     fetchSkills({ commit }) {
       return this.$axios
-        .get("/skills/1")
+        .get("/skills/5")
         .then(response => {
           commit("fillUpSkills", response.data);
         })
