@@ -4,14 +4,7 @@
       li(
       v-for="category in categories"
       :key="categories.id"
-      ) {{categories.category}}
-
-  //- input(
-  //-   type="text"
-  //-   placeholder="Название категории"
-  //- )
-  //- button(@click="addNewCategory") Добавить
-
+      ) {{ categories.category }}
 </template>
 
 <script>
@@ -36,4 +29,3 @@ export default {
   }
 };
 </script>
-

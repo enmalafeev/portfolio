@@ -1,6 +1,7 @@
 <template lang="pug">
   .skills
     h2.page-title Страница "Обо мне"
+    adminCategories
     adminSkillsRow(
       v-for="type in types"
       :key="type.name"
@@ -10,6 +11,7 @@
 </template>
 
 <script>
+import adminCategories from "./adminCategories";
 import adminSkillsRow from "./adminSkillsRow";
 import { mapActions, mapState } from "vuex";
 
