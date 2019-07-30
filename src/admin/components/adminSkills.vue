@@ -18,15 +18,6 @@ export default {
   components: {
     adminSkillsRow
   },
-  data() {
-    return {
-      types: [
-        { id: 1053, name: "Frontend" },
-        { id: 1054, name: "Backend" },
-        { id: 1055, name: "Workflow" }
-      ]
-    };
-  },
   computed: {
     ...mapState({
       skills: state => state.skills.data,

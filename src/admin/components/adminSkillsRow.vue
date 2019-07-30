@@ -1,6 +1,6 @@
 <template lang="pug">
   .skills-row
-    .skills-title {{type.category}}
+    h3.skills-title {{type.category}}
     table
       adminSkillsItem(
         v-for="skill in skills"
