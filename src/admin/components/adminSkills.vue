@@ -4,7 +4,7 @@
     adminSkillsRow(
       v-for="category in categories"
       :key="category.id"
-      :type="type"
+      :type="category"
       :skills="skills"
     )
 </template>
