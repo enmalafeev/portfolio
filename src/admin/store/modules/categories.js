@@ -3,7 +3,7 @@ const categories = {
     data: []
   },
   mutations: {
-    fetchCategories(state, categories) {
+    fillUpCategories(state, categories) {
       state.data = categories;
     },
     addCategoryToState(state, category) {
@@ -12,11 +12,19 @@ const categories = {
   },
   actions: {
     addCategory({ commit }, category) {
-      return this.axios
+      return this.$axios
         .post("/categories", category)
         .then(response => {
           commit("addCategoryToState", response.data);
           console.log("addCategory", response);
+        })
+        .catch(e => console.log(e));
+    },
+    fetchCategories({ commit }) {
+      return this.$axios
+        .get("/categories/5")
+        .then(response => {
+          commit("fillUpCategories", response.data);
         })
         .catch(e => console.log(e));
     }
