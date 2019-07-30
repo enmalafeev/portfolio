@@ -33,7 +33,7 @@ const skills = {
     },
     deleteSkill({ commit }, skill) {
       return this.$axios
-        .delete(`./skills/${skill.id}`)
+        .delete(`/skills/${skill}`)
         .then(response => {
           commit("removeSkill", response.data);
         })
