@@ -4,7 +4,7 @@
     td
       span {{skill.percent}} %
     td
-      button() Удалить
+      button(@click="removeSkill") Удалить
   tr(v-else)
     td
       input(type="text" v-model="newSkill.title")
@@ -42,12 +42,15 @@ export default {
     };
   },
   methods: {
-    ...mapActions(["addNewSkill"]),
+    ...mapActions(["addNewSkill", "deleteSkill"]),
     addSkill() {
       this.addNewSkill(this.newSkill).then(e => {
         this.newSkill.title = "";
         this.newSkill.percent = "";
       });
+    },
+    removeSkill() {
+      this.deleteSkill(this.skill.id);
     }
   }
 };
