@@ -1,7 +1,7 @@
 <template lang="pug">
   .skills
     h2.page-title Страница "Обо мне"
-    adminCategories
+    p {{ categories }}
     adminSkillsRow(
       v-for="type in types"
       :key="type.name"
@@ -30,14 +30,16 @@ export default {
   },
   computed: {
     ...mapState({
-      skills: state => state.skills.data
+      skills: state => state.skills.data,
+      categories: state => state.categories.data
     })
   },
   created() {
     this.fetchSkills();
+    this.fetchCategories();
   },
   methods: {
-    ...mapActions(["fetchSkills"])
+    ...mapActions(["fetchSkills", "fetchCategories"])
   }
 };
 </script>
