@@ -22,9 +22,9 @@ export default {
   data() {
     return {
       types: [
-        { id: 0, name: "Frontend" },
-        { id: 1, name: "Backend" },
-        { id: 2, name: "Workflow" }
+        { id: 1053, name: "Frontend" },
+        { id: 1054, name: "Backend" },
+        { id: 1055, name: "Workflow" }
       ]
     };
   },
