@@ -42,7 +42,7 @@ const router = new VueRouter({
 });
 
 const guard = axios.create({
-  baseURL: "http://webdev-api.loftschool.com/"
+  baseURL: "https://webdev-api.loftschool.com/"
 });
 
 // router.beforeEach((to, from, next) => {
