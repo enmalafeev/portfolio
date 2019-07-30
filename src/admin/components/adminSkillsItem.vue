@@ -2,14 +2,14 @@
   tr(v-if="editMode === false")
     td {{skill.title}}
     td
-      span {{skill.percents}} %
+      span {{skill.percent}} %
     td
       button() Удалить
   tr(v-else)
     td
       input(type="text" v-model="newSkill.title")
     td
-      input(type="text" v-model="newSkill.percents")
+      input(type="text" v-model="newSkill.percent")
     td
       button(@click="addSkill") Добавить
 </template>
@@ -36,7 +36,7 @@ export default {
     return {
       newSkill: {
         title: "",
-        percents: "",
+        percent: "",
         category: ""
       }
     };
@@ -46,7 +46,7 @@ export default {
     addSkill() {
       this.addNewSkill(this.newSkill).then(e => {
         this.newSkill.title = "";
-        this.newSkill.percents = "";
+        this.newSkill.percent = "";
       });
     }
   }
