@@ -4,7 +4,7 @@
     table
       adminSkillsItem(
         v-for="skill in skills"
-        v-if="skill.id === type.id"
+        v-if="skill.category === type.id"
         :key="skill.id"
         :skill="skill"
       )
