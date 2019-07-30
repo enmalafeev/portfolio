@@ -1,10 +1,9 @@
 <template lang="pug">
   .skills
     h2.page-title Страница "Обо мне"
-    p {{ categories }}
     adminSkillsRow(
-      v-for="type in types"
-      :key="type.name"
+      v-for="category in categories"
+      :key="category.id"
       :type="type"
       :skills="skills"
     )

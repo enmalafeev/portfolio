@@ -1,6 +1,6 @@
 <template lang="pug">
   .skills-row
-    .skills-title {{type.name}}
+    .skills-title {{type.category}}
     table
       adminSkillsItem(
         v-for="skill in skills"
@@ -34,8 +34,8 @@ export default {
     type: {
       type: Object,
       default: () => ({
-        id: 0,
-        title: "Frontend"
+        id: 1053,
+        category: "Frontend"
       })
     }
   }
