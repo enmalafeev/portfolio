@@ -31,11 +31,11 @@ const skills = {
         })
         .catch(e => console.log(e));
     },
-    deleteSkill({ watch }, skill) {
+    deleteSkill({ dispatch }, skill) {
       return this.$axios
         .delete(`/skills/${skill}`)
         .then(response => {
-          watch("fillUpSkills", response.data);
+          dispatch("fetchSkills", response.data);
         })
         .catch(e => console.log(e));
     }
