@@ -40,10 +40,10 @@ new Vue({
   data: {
     skills: {}
   },
-  created() {
+  mounted() {
     // const data = require("../../data/skills.json");
     axios
-      .get("https://webdev-api.loftschool.com//skills/5")
+      .get("https://webdev-api.loftschool.com/skills/5")
       .then(response => (this.skills = response.data))
       .catch(e => console.log(e));
     // this.skills = data;
