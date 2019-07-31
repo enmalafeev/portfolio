@@ -9,9 +9,6 @@ const skills = {
     addSkillToState(state, skill) {
       state.data.push(skill);
     }
-    // removeSkill(state, skill) {
-    //   state.data = state.data.filter(item => item.id !== skill.id);
-    // }
   },
   actions: {
     addNewSkill({ commit }, skill) {
