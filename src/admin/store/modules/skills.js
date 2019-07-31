@@ -8,10 +8,10 @@ const skills = {
     },
     addSkillToState(state, skill) {
       state.data.push(skill);
-    },
-    removeSkill(state, skill) {
-      state.data = state.data.filter(item => item.id !== skill.id);
     }
+    // removeSkill(state, skill) {
+    //   state.data = state.data.filter(item => item.id !== skill.id);
+    // }
   },
   actions: {
     addNewSkill({ commit }, skill) {
@@ -31,11 +31,11 @@ const skills = {
         })
         .catch(e => console.log(e));
     },
-    deleteSkill({ commit }, skill) {
+    deleteSkill({ watch }, skill) {
       return this.$axios
         .delete(`/skills/${skill}`)
         .then(response => {
-          commit("removeSkill", response.data);
+          watch("fillUpSkills", response.data);
         })
         .catch(e => console.log(e));
     }
