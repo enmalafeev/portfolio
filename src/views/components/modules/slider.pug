@@ -23,13 +23,13 @@ script(type="text/x-template")#slider-info
             @after-enter="callback('after-enter')"
             @enter="enterHandler"
         )
-            .slider__info-skills(:key="work.skills") {{ work.skills }}
+            .slider__info-skills(:key="work.skills") {{ work.techs }}
         .slider__info-button
             a(:href="work.link" target="_blank").btn-show-portfolio-site Посмотреть сайт
 
 script(type="text/x-template")#slider-display
     .slider__display
-        img(:src="work.photo", alt="work1").slider__big-pic
+        img(:src=`https://webdev-api.loftschool.com/${work.photo}`, alt="work1").slider__big-pic
 
 script(type="text/x-template")#slider-buttons
     .slider__buttons

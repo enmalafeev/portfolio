@@ -2,28 +2,28 @@
   {
     "id": 1,
     "title": "Интернет магазин гаджетов Device",
-    "skills": "Html, Css, JavaScript",
+    "techs": "HTML, CSS, JavaScript",
     "photo": "assets/images/content/slider/device.png",
     "link": "https://enmalafeev.github.io/81962-device/"
   },
   {
     "id": 2,
     "title": "Личный сайт-портфолио",
-    "skills": "Webpack, Gulp, Yarn, Npm, Pug, Git, Css Grid, JavaScript, Vue.js",
+    "techs": "Webpack, Gulp, Yarn, Npm, Pug, Git, Css Grid, JavaScript, Vue.js",
     "photo": "assets/images/content/slider/portfolio.jpg",
     "link": "https://enmalafeev.github.io/portfolio/dist/"
   },
   {
     "id": 3,
     "title": "Консольная игра Brain-games",
-    "skills": "Node.js, JS ES-6, Babel, Npm, Travis",
+    "techs": "Node.js, JS ES-6, Babel, Npm, Travis",
     "photo": "assets/images/content/slider/brain-games.png",
     "link": "https://github.com/enmalafeev/brainz-gamez"
   },
   {
     "id": 4,
     "title": "Консольная утилита Genn-diff",
-    "skills": "Node.js, JS ES-6, Babel, Npm, Travis, Jest",
+    "techs": "Node.js, JS ES-6, Babel, Npm, Travis, Jest",
     "photo": "assets/images/content/slider/genndiff.png",
     "link": "https://github.com/enmalafeev/genn-diff"
   }
