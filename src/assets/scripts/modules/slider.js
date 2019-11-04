@@ -1,4 +1,5 @@
 import Vue from "vue";
+import axios from "axios";
 
 const info = {
   template: "#slider-info",
@@ -101,7 +102,11 @@ new Vue({
     }
   },
   created() {
-    this.works = require("../../data/works.json");
+    // this.works = require("../../data/works.json");
+    // this.currentWork = this.works[0];
+    axios
+      .get("https://webdev-api.loftschool.com/works/5")
+      .then(response => (this.works = response.data));
     this.currentWork = this.works[0];
   },
   methods: {
