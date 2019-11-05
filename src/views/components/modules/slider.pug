@@ -29,7 +29,7 @@ script(type="text/x-template")#slider-info
 
 script(type="text/x-template")#slider-display
     .slider__display
-        img(:src="work.photo", alt="work1").slider__big-pic
+        img(:src="`https://webdev-api.loftschool.com/${work.photo}`", alt="work1").slider__big-pic
 
 script(type="text/x-template")#slider-buttons
     .slider__buttons
