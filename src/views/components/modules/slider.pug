@@ -28,19 +28,17 @@ script(type="text/x-template")#slider-info
             a(:href="work.link" target="_blank").btn-show-portfolio-site Посмотреть сайт
 
 script(type="text/x-template")#slider-display
-    - var host = 'https://webdev-api.loftschool.com/'
     .slider__display
-        img(:src="`${host}${work.photo}`", alt="work1").slider__big-pic
+        img(:src="`https://webdev-api.loftschool.com/${work.photo}`", alt="work1").slider__big-pic
 
 script(type="text/x-template")#slider-buttons
     .slider__buttons
         .slider__button(@click="slide('prev')")
             transition-group(name="slide-down" tag="div").slider__button-img-cnt
                 .slider__button-img-wrap(:key="getReqImage('prev').photo")
-                    - var host = 'https://webdev-api.loftschool.com/'
-                    img(:src="`${host}${getReqImage('prev').photo}`").slider__btn-pic
+                    img(:src="`https://webdev-api.loftschool.com/${getReqImage('prev').photo}`").slider__btn-pic
         .slider__button.slider__button--next(@click="slide('next')")
             transition-group(name="slide-up" tag="div").slider__button-img-cnt
                 .slider__button-img-wrap(:key="getReqImage('next').photo")
-                    img(:src="`${host}${getReqImage('next').photo}`").slider__btn-pic
+                    img(:src="`https://webdev-api.loftschool.com/${getReqImage('next').photo}`").slider__btn-pic
 

@@ -101,13 +101,11 @@ new Vue({
       this.currentWork = this.works[value];
     }
   },
-  created() {
-    // this.works = require("../../data/works.json");
-    // this.currentWork = this.works[0];
+  mounted() {
     axios
       .get("https://webdev-api.loftschool.com/works/5")
-      .then(response => (this.works = response.data));
-    this.currentWork = this.works[0];
+      .then(response => (this.works = response.data))
+      .then(works => (this.currentWork = works[0]));
   },
   methods: {
     handleSlide(direction) {
