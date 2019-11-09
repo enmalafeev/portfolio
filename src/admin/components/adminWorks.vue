@@ -9,11 +9,28 @@
         span.btn-upload Загрузить картинку
         input(type="file" @change="addPhoto").upload-input
     button(@click="addWorks").btn Добавить
+
+    h2 Список работ
+    ul.works-list
+      adminWorkItem(
+        v-for="work in works"
+        :key="work.id"
+        :work="work"
+      )
+    hr
+      
+
+
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import adminWorkItem from "./adminWorkItem";
+
+import { mapActions, mapState } from "vuex";
 export default {
+  components: {
+    adminWorkItem
+  },
   data() {
     return {
       work: {
@@ -24,8 +41,16 @@ export default {
       }
     };
   },
+  computed: {
+    ...mapState({
+      works: state => state.works.data
+    })
+  },
+  created() {
+    this.fetchWorks();
+  },
   methods: {
-    ...mapActions(["addNewWork"]),
+    ...mapActions(["addNewWork", "fetchWorks"]),
     addPhoto(e) {
       const files = e.target.files;
       if (files.length === 0) return;

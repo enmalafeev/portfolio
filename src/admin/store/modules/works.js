@@ -1,6 +1,6 @@
 const works = {
   state: {
-    work: []
+    data: []
   },
   mutations: {
     fillUpWorks(state, works) {
@@ -19,6 +19,14 @@ const works = {
           console.log("work was added", response);
         })
         .catch(e => console.error(e));
+    },
+    fetchWorks({ commit }) {
+      return this.$axios
+        .get("/works/5")
+        .then(response => {
+          commit("fillUpWorks", response.data);
+        })
+        .catch(e => console.log(e));
     }
   }
 };
