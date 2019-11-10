@@ -17,9 +17,6 @@
         :key="work.id"
         :work="work"
       )
-    hr
-      
-
 
 </template>
 
