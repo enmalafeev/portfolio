@@ -5,6 +5,8 @@
     form.form
       input(type="text" placeholder="Название проекта" v-model="work.title").form__name
       input(type="text" placeholder="Технологии" v-model="work.techs").form__date
+      input(type="text" placeholder="Описание" v-model="work.description").form__description
+      input(type="text" placeholder="Ссылка на работу" v-model="work.link").form__link
       label.file-upload
         span.btn-upload Загрузить картинку
         input(type="file" @change="addPhoto").upload-input
@@ -33,6 +35,7 @@ export default {
       work: {
         title: "",
         techs: "",
+        description: "",
         link: "",
         photo: ""
       }
@@ -76,7 +79,9 @@ export default {
 }
 
 .form__name,
-.form__date {
+.form__date,
+.form__description,
+.form__link {
   width: 100%;
   height: 45px;
   line-height: 45px;
