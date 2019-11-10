@@ -9,7 +9,7 @@
         span.btn-upload Загрузить картинку
         input(type="file" @change="addPhoto").upload-input
     button(@click="addWorks").btn Добавить
-
+    hr
     h2 Список работ
     ul.works-list
       adminWorkItem(
@@ -133,5 +133,11 @@ export default {
   background-color: $green;
   color: #fff;
   font-size: 16px;
+}
+
+.works-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 </style>

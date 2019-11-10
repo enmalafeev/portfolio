@@ -42,7 +42,7 @@ html {
   line-height: 1.4;
 }
 .wrapper {
-  height: 100%;
+  height: 100wh;
   background: url("./img/bg1200.jpg") no-repeat center / cover;
   position: relative;
   &::after {

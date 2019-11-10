@@ -20,6 +20,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.work-item {
+  width: 33%;
+}
+
 .img-container {
   width: 100px;
   height: 100px;
