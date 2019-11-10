@@ -11,7 +11,7 @@ import adminSkills from "./components/adminSkills";
 
 const routes = [
   {
-    path: "/",
+    path: "/portfolio/dist/admin",
     components: {
       default: adminSkills,
       header: adminHeader,
@@ -19,7 +19,7 @@ const routes = [
     }
   },
   {
-    path: "/blog",
+    path: "/portfolio/dist/admin/blog",
     components: {
       default: adminBlog,
       header: adminHeader,
@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: "/works",
+    path: "/portfolio/dist/admin/works",
     components: {
       default: adminWorks,
       header: adminHeader,
@@ -45,20 +45,20 @@ const guard = axios.create({
   baseURL: "https://webdev-api.loftschool.com/"
 });
 
-// router.beforeEach((to, from, next) => {
-//   guard
-//     .get("/user", {
-//       headers: {
-//         Autorization: `Bearer ${localStorage.getItem("token")}`
-//       }
-//     })
-//     .then(response => {
-//       next();
-//     })
-//     .catch(error => {
-//       localStorage.removeItem("token");
-//       window.location.href = "/";
-//     });
-// });
+router.beforeEach((to, from, next) => {
+  guard
+    .get("/user", {
+      headers: {
+        Autorization: `Bearer ${localStorage.getItem("token")}`
+      }
+    })
+    .then(response => {
+      next();
+    })
+    .catch(error => {
+      localStorage.removeItem("token");
+      window.location.href = "/";
+    });
+});
 
 export default router;
