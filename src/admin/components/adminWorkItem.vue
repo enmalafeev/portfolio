@@ -6,7 +6,7 @@
       h2.work-item__title {{work.title}}
       p.work-item__desc {{work.description}}
       a.work-item__link(:href="`${work.link}`") {{work.link}}
-      button.work-item__btn(@click="this.deleteWork(work.id)") Удалить работу
+      button.work-item__btn(@click="removeWork") Удалить работу
 
 </template>
 
@@ -22,7 +22,10 @@ export default {
   },
   methods: {
     ...mapMutations(["updateWork"]),
-    ...mapActions(["deleteWork"])
+    ...mapActions(["deleteWork"]),
+    removeWork() {
+      this.deleteWork(this.work.id);
+    }
   }
 };
 </script>
