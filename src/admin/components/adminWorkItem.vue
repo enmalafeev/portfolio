@@ -2,20 +2,27 @@
   li.work-item
     div.img-container
       img.work-img(:src="`https://webdev-api.loftschool.com/${work.photo}`")
-    .work-item__container  
+    .work-item__container
       h2.work-item__title {{work.title}}
       p.work-item__desc {{work.description}}
       a.work-item__link(:href="`${work.link}`") {{work.link}}
+      button.work-item__btn(@click="this.deleteWork(work.id)") Удалить работу
 
 </template>
 
 <script>
+import { mapMutations, mapActions } from "vuex";
+
 export default {
   props: {
     work: {
       type: Object,
       default: () => {}
     }
+  },
+  methods: {
+    ...mapMutations(["updateWork"]),
+    ...mapActions(["deleteWork"])
   }
 };
 </script>
@@ -25,15 +32,20 @@ export default {
   width: 33%;
   box-shadow: 1px 2px 16px 2px rgba(0, 0, 0, 1);
   background-color: #fff;
+  text-align: center;
   &__container {
     padding: 10px;
     margin-bottom: 35px;
-    text-align: center;
   }
   &__link {
-    text-align: center;
+    display: inline-block;
     color: #6269db;
     word-wrap: break-word;
+    margin-bottom: 15px;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
   }
 }
 
