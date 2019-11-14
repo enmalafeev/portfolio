@@ -36,6 +36,9 @@ export default {
   box-shadow: 1px 2px 16px 2px rgba(0, 0, 0, 1);
   background-color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &__container {
     padding: 10px;
     margin-bottom: 35px;
@@ -62,5 +65,14 @@ export default {
 .work-img {
   height: auto;
   max-width: 100%;
+}
+
+.work-item__btn {
+  height: 45px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
 }
 </style>
