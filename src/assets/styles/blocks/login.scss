@@ -1,6 +1,7 @@
 .login {
     transform: rotateY(180deg);
     display: flex;
+    z-index: 20;
     flex-direction: column;
     justify-content: space-between;
     &__title {
