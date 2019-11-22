@@ -46,9 +46,10 @@ block content
           .user__wrap-links
             +socials(socials, 'socials__fill-green')
         +nav('main-menu', [ {title: 'Мои работы', link: 'works.html' }, {title: 'Обо мне', link: 'about.html'}, {title: 'Блог', link: 'blog.html' }])
-      .login
-        h2.login__title.block-subtitle Авторизуйтесь
-        #auth-component
+      .login-card
+        .login
+          h2.login__title.block-subtitle Авторизуйтесь
+          #auth-component
 
     footer.main-footer
       p &#169 Евгений Малафеев 2019
