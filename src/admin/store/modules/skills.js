@@ -1,42 +1,42 @@
 const skills = {
   state: {
-    data: []
+    data: [],
   },
   mutations: {
     fillUpSkills(state, skills) {
-      state.data = skills;
+      state.data = skills
     },
     addSkillToState(state, skill) {
-      state.data.push(skill);
-    }
+      state.data.push(skill)
+    },
   },
   actions: {
     addNewSkill({ commit }, skill) {
       return this.$axios
-        .post("/skills", skill)
+        .post('/skills', skill)
         .then(response => {
-          commit("addSkillToState", response.data);
-          console.log("addSkill", response);
+          commit('addSkillToState', response.data)
+          console.log('addSkill', response)
         })
-        .catch(e => console.error(e));
+        .catch(e => console.error(e))
     },
     fetchSkills({ commit }) {
       return this.$axios
-        .get("/skills/5")
+        .get('/skills/5')
         .then(response => {
-          commit("fillUpSkills", response.data);
+          commit('fillUpSkills', response.data)
         })
-        .catch(e => console.log(e));
+        .catch(e => console.log(e))
     },
     deleteSkill({ dispatch }, skill) {
       return this.$axios
         .delete(`/skills/${skill}`)
         .then(response => {
-          dispatch("fetchSkills", response.data);
+          dispatch('fetchSkills', response.data)
         })
-        .catch(e => console.log(e));
-    }
-  }
-};
+        .catch(e => console.log(e))
+    },
+  },
+}
 
-export default skills;
+export default skills
