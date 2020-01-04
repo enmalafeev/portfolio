@@ -16,13 +16,13 @@ export default {
   data() {
     return {
       tabs: [
-        { title: "Обо мне", href: "/portfolio/dist/admin/" },
-        { title: "Работы", href: "/portfolio/dist/admin/works" },
-        { title: "Блог", href: "/portfolio/dist/admin/blog" }
-      ]
-    };
-  }
-};
+        { title: 'Обо мне', href: '/portfolio/dist/admin/' },
+        { title: 'Работы', href: '/portfolio/dist/admin/works' },
+        { title: 'Блог', href: '/portfolio/dist/admin/blog' },
+      ],
+    }
+  },
+}
 </script>
 
 

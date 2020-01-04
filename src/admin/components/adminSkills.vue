@@ -10,28 +10,28 @@
 </template>
 
 <script>
-import adminCategories from "./adminCategories";
-import adminSkillsRow from "./adminSkillsRow";
-import { mapActions, mapState } from "vuex";
+import adminCategories from './adminCategories'
+import adminSkillsRow from './adminSkillsRow'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   components: {
-    adminSkillsRow
+    adminSkillsRow,
   },
   computed: {
     ...mapState({
       skills: state => state.skills.data,
-      categories: state => state.categories.data
-    })
+      categories: state => state.categories.data,
+    }),
   },
   created() {
-    this.fetchSkills();
-    this.fetchCategories();
+    this.fetchSkills()
+    this.fetchCategories()
   },
   methods: {
-    ...mapActions(["fetchSkills", "fetchCategories"])
-  }
-};
+    ...mapActions(['fetchSkills', 'fetchCategories']),
+  },
+}
 </script>
 
 

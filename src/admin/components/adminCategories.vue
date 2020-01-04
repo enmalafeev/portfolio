@@ -8,24 +8,24 @@
 </template>
 
 <script>
-import { mapActions, mapState } from "vuex";
+import { mapActions, mapState } from 'vuex'
 
 export default {
   data() {
     return {
-      categories: []
-    };
+      categories: [],
+    }
   },
   computed: {
     ...mapState({
-      categories: state => state.categories.data
-    })
+      categories: state => state.categories.data,
+    }),
   },
   created() {
-    this.fetchCategories();
+    this.fetchCategories()
   },
   methods: {
-    ...mapActions(["fetchCategories"])
-  }
-};
+    ...mapActions(['fetchCategories']),
+  },
+}
 </script>

@@ -19,7 +19,7 @@
     align-items: center;
   }
   &__title {
-    font-family: "Roboto", Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
     font-size: 28px;
     color: #fff;
   }

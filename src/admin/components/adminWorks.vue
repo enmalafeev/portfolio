@@ -23,49 +23,49 @@
 </template>
 
 <script>
-import adminWorkItem from "./adminWorkItem";
+import adminWorkItem from './adminWorkItem'
 
-import { mapActions, mapState, mapMutations } from "vuex";
+import { mapActions, mapState, mapMutations } from 'vuex'
 export default {
   components: {
-    adminWorkItem
+    adminWorkItem,
   },
   data() {
     return {
       work: {
-        title: "",
-        techs: "",
-        description: "",
-        link: "",
-        photo: ""
-      }
-    };
+        title: '',
+        techs: '',
+        description: '',
+        link: '',
+        photo: '',
+      },
+    }
   },
   computed: {
     ...mapState({
-      works: state => state.works.data
-    })
+      works: state => state.works.data,
+    }),
   },
   created() {
-    this.fetchWorks();
+    this.fetchWorks()
   },
   methods: {
-    ...mapActions(["addNewWork", "fetchWorks"]),
+    ...mapActions(['addNewWork', 'fetchWorks']),
     addPhoto(e) {
-      const files = e.target.files;
-      if (files.length === 0) return;
-      this.work.photo = files[0];
+      const files = e.target.files
+      if (files.length === 0) return
+      this.work.photo = files[0]
     },
     addWorks() {
-      const formData = new FormData();
+      const formData = new FormData()
       Object.keys(this.work).forEach(prop => {
-        formData.append(prop, this.work[prop]);
-      });
+        formData.append(prop, this.work[prop])
+      })
 
-      this.addNewWork(formData);
-    }
-  }
-};
+      this.addNewWork(formData)
+    },
+  },
+}
 </script>
 
 
@@ -107,12 +107,12 @@ export default {
   position: relative;
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     width: 35px;
     height: 35px;
     top: -5px;
     left: 0;
-    background: url("../img/upload.png") no-repeat center;
+    background: url('../img/upload.png') no-repeat center;
   }
 }
 

@@ -11,23 +11,23 @@
 </template>
 
 <script>
-import { mapMutations, mapActions } from "vuex";
+import { mapMutations, mapActions } from 'vuex'
 
 export default {
   props: {
     work: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   methods: {
-    ...mapMutations(["updateWork"]),
-    ...mapActions(["deleteWork"]),
+    ...mapMutations(['updateWork']),
+    ...mapActions(['deleteWork']),
     removeWork() {
-      this.deleteWork(this.work.id);
-    }
-  }
-};
+      this.deleteWork(this.work.id)
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>

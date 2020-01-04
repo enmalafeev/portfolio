@@ -9,27 +9,27 @@
 </template>
 
 <script>
-import adminHeader from "./components/adminHeader";
-import adminTabs from "./components/adminTabs";
-import adminSkills from "./components/adminSkills";
+import adminHeader from './components/adminHeader'
+import adminTabs from './components/adminTabs'
+import adminSkills from './components/adminSkills'
 
 const data = [
-  { id: 1, title: "HTML", percent: 20, category: 0 },
-  { id: 2, title: "PHP", percent: 20, category: 1 },
-  { id: 3, title: "CSS", percent: 20, category: 0 },
-  { id: 4, title: "Node.js", percent: 30, category: 1 },
-  { id: 5, title: "Mongo", percent: 20, category: 1 },
-  { id: 6, title: "Git", percent: 20, category: 2 },
-  { id: 7, title: "Gulp", percent: 20, category: 2 }
-];
+  { id: 1, title: 'HTML', percent: 20, category: 0 },
+  { id: 2, title: 'PHP', percent: 20, category: 1 },
+  { id: 3, title: 'CSS', percent: 20, category: 0 },
+  { id: 4, title: 'Node.js', percent: 30, category: 1 },
+  { id: 5, title: 'Mongo', percent: 20, category: 1 },
+  { id: 6, title: 'Git', percent: 20, category: 2 },
+  { id: 7, title: 'Gulp', percent: 20, category: 2 },
+]
 
 export default {
   components: {
     adminHeader,
     adminTabs,
-    adminSkills
-  }
-};
+    adminSkills,
+  },
+}
 </script>
 
 <style lang="scss">
@@ -37,17 +37,17 @@ body,
 html {
   margin: 0;
   height: 100%;
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4;
 }
 .wrapper {
   height: 100wh;
-  background: url("./img/bg1200.jpg") no-repeat center / cover;
+  background: url('./img/bg1200.jpg') no-repeat center / cover;
   position: relative;
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.85);

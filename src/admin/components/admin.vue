@@ -10,33 +10,33 @@
 </template>
 
 <script>
-import adminHeader from "./adminHeader";
-import adminTabs from "./adminTabs";
-import adminSkills from "./adminSkills";
+import adminHeader from './adminHeader'
+import adminTabs from './adminTabs'
+import adminSkills from './adminSkills'
 
 const data = [
-  { id: 1, title: "HTML", percent: 20, category: 0 },
-  { id: 2, title: "PHP", percent: 20, category: 1 },
-  { id: 3, title: "CSS", percent: 20, category: 0 },
-  { id: 4, title: "Node.js", percent: 30, category: 1 },
-  { id: 5, title: "Mongo", percent: 20, category: 1 },
-  { id: 6, title: "Git", percent: 20, category: 2 },
-  { id: 7, title: "Gulp", percent: 20, category: 2 }
-];
+  { id: 1, title: 'HTML', percent: 20, category: 0 },
+  { id: 2, title: 'PHP', percent: 20, category: 1 },
+  { id: 3, title: 'CSS', percent: 20, category: 0 },
+  { id: 4, title: 'Node.js', percent: 30, category: 1 },
+  { id: 5, title: 'Mongo', percent: 20, category: 1 },
+  { id: 6, title: 'Git', percent: 20, category: 2 },
+  { id: 7, title: 'Gulp', percent: 20, category: 2 },
+]
 
 export default {
   components: {
     adminHeader,
     adminTabs,
-    adminSkills
-  }
-};
+    adminSkills,
+  },
+}
 </script>
 
 
 <style lang="scss" scoped>
 body {
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: 'Roboto', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
@@ -47,11 +47,11 @@ body {
   width: 100%;
   height: 100vh;
   min-height: 100%;
-  background: url("./img/bg1200.jpg") no-repeat center / cover;
+  background: url('./img/bg1200.jpg') no-repeat center / cover;
   position: relative;
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     background-color: #fff;

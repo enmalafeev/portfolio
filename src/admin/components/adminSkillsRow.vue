@@ -20,24 +20,24 @@
 </template>
 
 <script>
-import adminSkillsItem from "./adminSkillsItem";
+import adminSkillsItem from './adminSkillsItem'
 
 export default {
   components: {
-    adminSkillsItem
+    adminSkillsItem,
   },
   props: {
     skills: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     type: {
       type: Object,
       default: () => ({
         id: 1053,
-        category: "Frontend"
-      })
-    }
-  }
-};
+        category: 'Frontend',
+      }),
+    },
+  },
+}
 </script>
