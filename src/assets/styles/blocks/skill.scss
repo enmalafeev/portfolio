@@ -18,20 +18,20 @@
 
 .skills-row {
     margin-bottom: 40px;
+    width: 100%;
     &__list {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         @include small-phones {
             width: 90%;
             flex-wrap: wrap;
-            margin: 0 auto;
         }
     }
-    &__item:not(:last-child) {
-        margin-right: 40px;
+    &__item {
         position: relative;
+        margin-bottom: 10px;
         @include small-phones {
             margin-bottom: 30px;
             &:nth-child(2n) {
@@ -41,6 +41,7 @@
     }
     &__title {
         font-size: 28px;
+        text-align: center;
         font-weight: 500;
         color: $grey;
         margin-bottom: 10px;
@@ -48,19 +49,6 @@
             font-size: 20px;
             text-align: center;
         }
-    }
-}
-
-.skills-row__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    @include tablets {
-        justify-content: space-between;
-    }
-    @include small-phones {
-        justify-content: center;
-        flex-wrap: wrap;
     }
 }
 
