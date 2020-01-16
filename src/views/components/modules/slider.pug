@@ -16,7 +16,7 @@ script(type="text/x-template")#slider-info
     .slider__info-container
         .slider__info-title
             h2.block-subtitle {{ work.title }}
-        transition-group(
+        transition-group.transition-block(
             appear
             :css="false"
             @before-enter="callback('before-enter')"

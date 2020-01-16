@@ -23,8 +23,7 @@
     color: $green;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 20px;
     border-top: 1px solid $green;
     border-bottom: 1px solid $green;
     margin-bottom: 40px;
@@ -52,12 +51,23 @@
 }
 
 .slider__info-title {
-
+    display: flex;
+    justify-content: center;
     @include phones {
-        width: 75%;
+        width: 100%;
         margin-top: 20px;
     }
+}
 
+.transition-block {
+    padding: 0 10px;
+}
+
+.block-subtitle {
+    width: 90%;
+    @include phones {
+        width: 70%;
+    }
 }
 
 .slider__info-container {
