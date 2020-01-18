@@ -1,123 +1,123 @@
-import Vue from 'vue'
-import axios from 'axios'
+import Vue from "vue";
+import axios from "axios";
 
 const info = {
-  template: '#slider-info',
+  template: "#slider-info",
   props: {
-    work: Object,
+    work: Object
   },
   methods: {
     callback(e) {},
     enterHandler(el, done) {
-      const sentence = el.innerText.trim()
+      const sentence = el.innerText.trim();
       const wrapped = sentence
-        .split('')
+        .split("")
         .map(item => {
           return `
-            <span class="${item === ' ' ? 'whitespace' : ''}">${item}</span>
-        `
+            <span class="${item === " " ? "whitespace" : ""}">${item}</span>
+        `;
         })
-        .join('')
-      el.innerHTML = wrapped
+        .join("");
+      el.innerHTML = wrapped;
 
-      const words = Array.from(el.children)
-      let i = 0
+      const words = Array.from(el.children);
+      let i = 0;
       function animate(words) {
-        const currentLetter = words[i]
+        const currentLetter = words[i];
 
         let timer = setTimeout(() => {
-          animate(words)
-        }, 30)
+          animate(words);
+        }, 30);
 
-        currentLetter.classList.add('bounceIn')
+        currentLetter.classList.add("bounceIn");
 
-        i++
+        i++;
 
         if (i >= words.length) {
-          clearTimeout(timer)
-          done()
+          clearTimeout(timer);
+          done();
         }
       }
 
-      animate(words)
-    },
-  },
-}
+      animate(words);
+    }
+  }
+};
 
 const display = {
-  template: '#slider-display',
+  template: "#slider-display",
   props: {
-    work: Object,
-  },
-}
+    work: Object
+  }
+};
 
 const buttons = {
-  template: '#slider-buttons',
+  template: "#slider-buttons",
   props: {
     works: Array,
-    currentIndex: Number,
+    currentIndex: Number
   },
   methods: {
     slide(direction) {
-      this.$emit('slide', direction)
+      this.$emit("slide", direction);
     },
     getReqImage(direction) {
-      const worksArray = [...this.works]
+      const worksArray = [...this.works];
 
       switch (direction) {
-        case 'prev':
-          const lastItem = worksArray[worksArray.length - 1]
-          worksArray.unshift(lastItem)
-          worksArray.pop()
-          break
-        case 'next':
-          worksArray.push(worksArray[0])
-          worksArray.shift()
-          break
+        case "prev":
+          const lastItem = worksArray[worksArray.length - 1];
+          worksArray.unshift(lastItem);
+          worksArray.pop();
+          break;
+        case "next":
+          worksArray.push(worksArray[0]);
+          worksArray.shift();
+          break;
       }
-      return worksArray[this.currentIndex]
-    },
-  },
-}
+      return worksArray[this.currentIndex];
+    }
+  }
+};
 
 new Vue({
-  el: '#slider-component',
+  el: "#slider-component",
   components: {
     info,
     display,
-    buttons,
+    buttons
   },
   data: {
     works: [],
     currentWork: {},
-    currentIndex: 0,
+    currentIndex: 0
   },
   watch: {
     currentIndex(value) {
-      const workAmount = this.works.length - 1
-      if (value > workAmount) this.currentIndex = 0
-      if (value < 0) this.currentIndex = workAmount
+      const workAmount = this.works.length - 1;
+      if (value > workAmount) this.currentIndex = 0;
+      if (value < 0) this.currentIndex = workAmount;
 
-      this.currentWork = this.works[value]
-    },
+      this.currentWork = this.works[value];
+    }
   },
   mounted() {
     axios
-      .get('https://webdev-api.loftschool.com/works/5')
+      .get("https://webdev-api.loftschool.com/works/5")
       .then(response => (this.works = response.data))
-      .then(works => (this.currentWork = works[0]))
+      .then(works => (this.currentWork = works[0]));
   },
   methods: {
     handleSlide(direction) {
       switch (direction) {
-        case 'next':
-          this.currentIndex = this.currentIndex + 1
-          break
-        case 'prev':
-          this.currentIndex = this.currentIndex - 1
-          break
+        case "next":
+          this.currentIndex = this.currentIndex + 1;
+          break;
+        case "prev":
+          this.currentIndex = this.currentIndex - 1;
+          break;
       }
-    },
+    }
   },
-  template: '#slider',
-})
+  template: "#slider"
+});

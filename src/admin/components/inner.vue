@@ -26,22 +26,22 @@ export default {
   inheritAttrs: false,
   data() {
     return {
-      title: 'I am title!',
+      title: "I am title!",
       formData: {
-        username: 'John Doe',
-        hobby: ['music'],
-        card: 'visa',
-        nums: '1',
-      },
-    }
+        username: "John Doe",
+        hobby: ["music"],
+        card: "visa",
+        nums: "1"
+      }
+    };
   },
   mounted() {
-    console.log(this.$attrs)
+    console.log(this.$attrs);
   },
   methods: {
     handleClick() {
-      console.log('click')
-    },
-  },
-}
+      console.log("click");
+    }
+  }
+};
 </script>

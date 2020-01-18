@@ -34,58 +34,58 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
+import { mapActions } from "vuex";
 
 export default {
   directives: {
     focus: {
       inserted: function(el) {
-        el.focus()
-      },
-    },
+        el.focus();
+      }
+    }
   },
   props: {
     editMode: {
       type: Boolean,
-      default: false,
+      default: false
     },
     typeId: {
       type: Number,
-      default: 0,
+      default: 0
     },
     skill: {
       type: Object,
-      default: () => {},
-    },
+      default: () => {}
+    }
   },
   data() {
     return {
       newSkill: {
-        title: '',
-        percent: '',
-        category: this.typeId,
-      },
-    }
+        title: "",
+        percent: "",
+        category: this.typeId
+      }
+    };
   },
   methods: {
-    ...mapActions(['addNewSkill', 'deleteSkill']),
+    ...mapActions(["addNewSkill", "deleteSkill"]),
     addSkill() {
       this.addNewSkill(this.newSkill).then(e => {
-        this.newSkill.title = ''
-        this.newSkill.percent = ''
-      })
+        this.newSkill.title = "";
+        this.newSkill.percent = "";
+      });
     },
     removeSkill() {
-      this.deleteSkill(this.skill.id)
+      this.deleteSkill(this.skill.id);
     },
     editSkill() {
-      this.editMode = true
+      this.editMode = true;
     },
     editDone() {
-      this.editMode = false
-    },
-  },
-}
+      this.editMode = false;
+    }
+  }
+};
 </script>
 
 <style lang="scss" scoped>

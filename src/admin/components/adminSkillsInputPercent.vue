@@ -5,13 +5,13 @@
 
 <script>
 export default {
-  name: 'AdminSkillsInputPercent',
+  name: "AdminSkillsInputPercent",
   data() {
     return {
-      percent: 0,
-    }
-  },
-}
+      percent: 0
+    };
+  }
+};
 </script>
 
 <style lang="scss" scopped>
