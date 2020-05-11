@@ -65,13 +65,6 @@
     padding: 0 10px;
 }
 
-.block-subtitle {
-    width: 100%;
-    @include phones {
-        width: 90%;
-    }
-}
-
 .slider__info-container {
     grid-area: info;
     display: flex;
