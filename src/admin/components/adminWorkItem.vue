@@ -32,8 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .work-item {
-  width: 33%;
-  box-shadow: 1px 2px 16px 2px rgba(0, 0, 0, 1);
+  box-shadow: 1px 2px 16px 2px rgba(0, 0, 0, 0.5);
   background-color: #fff;
   text-align: center;
   display: flex;

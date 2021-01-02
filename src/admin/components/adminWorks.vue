@@ -138,8 +138,9 @@ export default {
 }
 
 .works-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(600px, 1fr));
+  grid-gap: 20px;
 }
 </style>

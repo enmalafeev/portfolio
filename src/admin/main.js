@@ -1,14 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import { store } from './store'
-import axios from './requests'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import { store } from "./store";
+import axios from "./requests";
 
-store.$axios = axios
+store.$axios = axios;
 
 new Vue({
-  el: '#admin-app',
+  el: "#admin-app",
   router,
   store,
-  render: h => h(App),
-})
+  render: h => h(App)
+});
