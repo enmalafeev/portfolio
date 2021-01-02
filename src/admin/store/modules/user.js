@@ -1,40 +1,40 @@
 const user = {
   state: {
-    userdata: {},
+    userdata: {}
   },
   mutations: {
     fillUpUserData(state, user) {
-      state.userdata = user
+      state.userdata = user;
     },
     clearUserData(state) {
-      state.userdata = {}
-    },
+      state.userdata = {};
+    }
   },
   getters: {
-    userId: state => state.userdata.id,
+    userId: state => state.userdata.id
   },
   actions: {
     getUserInfo({ commit, state }) {
       return this.$axios
-        .get('/user')
+        .get("/user")
         .then(
           response => {
-            commit('fillUpUserData', response.data.user)
+            commit("fillUpUserData", response.data.user);
           },
           error => {
-            console.log('usererror')
+            console.log("usererror");
           }
         )
-        .catch(e => console.error(e))
+        .catch(e => console.error(e));
     },
     logout({ commit }) {
-      return this.$axios.post('/logout').then(response => {
-        console.log('logout response', response)
-        localStorage.removeItem('token')
-        commit('clearUserData')
-      })
-    },
-  },
-}
+      return this.$axios.post("/logout").then(response => {
+        console.log("logout response", response);
+        localStorage.removeItem("token");
+        commit("clearUserData");
+      });
+    }
+  }
+};
 
-export default user
+export default user;
