@@ -11,7 +11,7 @@ import adminSkills from "./components/adminSkills";
 
 const routes = [
   {
-    path: "portfolio/dist/admin",
+    path: "/portfolio/dist/admin",
     components: {
       default: adminSkills,
       header: adminHeader,
@@ -19,7 +19,7 @@ const routes = [
     }
   },
   {
-    path: "portfolio/dist/admin/blog",
+    path: "/portfolio/dist/admin/blog",
     components: {
       default: adminBlog,
       header: adminHeader,
@@ -27,7 +27,7 @@ const routes = [
     }
   },
   {
-    path: "portfolio/dist/admin/works",
+    path: "/portfolio/dist/admin/works",
     components: {
       default: adminWorks,
       header: adminHeader,
